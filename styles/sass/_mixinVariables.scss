@@ -14,13 +14,15 @@ $straightBlue: #0868AC;
    font-size: .8rem;
    color: $white;
    text-transform: uppercase;
-   padding: 10px 15px;
+   padding: 10px 25px;
    border: 2px solid $white;
-   transition: background-color .3s, color .3s;
+   border-radius: 1px;
+   transition: background-color .3s, color .3s, transform .3s;
 }
 
-@mixin buttonInteractive($background, $fontColor) {
-   background-color: $background;
-   color: $fontColor;
-   transition: background-color .3s, color .3s;
+@mixin buttonInteractive($sectionColor) {
+   color: $sectionColor;
+   border: 2px solid $sectionColor;
+   transform: scaleX(1.07);
+   transition: border .3s, color .3s, transform .3s;
 }

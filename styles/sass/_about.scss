@@ -1,3 +1,76 @@
 .about {
-   height: 80vh;
+   min-height: 100vh;
+   margin: 50px;
+   display: flex;
+   align-items: center;
+
+}
+.headshotContainer, .aboutInfo {
+   width: calc(50% - 10px);
+}
+
+.headshotContainer {
+   margin-right: 20px;
+}
+
+.aboutInfo {
+   h3 {
+      color: $nonBinaryGold;
+      margin: 5px 0;
+   }
+
+   & > p {
+      margin: 15px 0;
+   }
+
+   .button {
+      margin: 15px 5px 30px 5px;
+
+      &:hover, 
+      &:focus {
+         @include buttonInteractive($nonBinaryGold)
+      }
+   }
+}
+
+.skills-box {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+   h4 {
+      width: 100%;
+   }
+
+   .skill {
+      align-self: flex-end;
+      height: 100%;
+   }
+
+   p {
+      text-align: center;
+      margin: 7px 0;
+   }
+
+   .javascript img {
+      width: 150%;
+      padding-bottom: 4px;
+   }
+
+   .jquery div {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background-color: $straightBlue;
+      padding-bottom: 3px;
+   }
+
+   .react img {
+      width: 80px;
+      padding-bottom: 3px;
+   }
+
+   .firebase {
+      width: 15%;
+   } 
 }

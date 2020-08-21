@@ -274,10 +274,13 @@ body {
   font-size: .8rem;
   color: #fff;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 10px 25px;
   border: 2px solid #fff;
-  -webkit-transition: background-color .3s, color .3s;
-  transition: background-color .3s, color .3s;
+  border-radius: 1px;
+  -webkit-transition: background-color .3s, color .3s, -webkit-transform .3s;
+  transition: background-color .3s, color .3s, -webkit-transform .3s;
+  transition: background-color .3s, color .3s, transform .3s;
+  transition: background-color .3s, color .3s, transform .3s, -webkit-transform .3s;
 }
 
 h1 {
@@ -375,5 +378,92 @@ header .skipToContent .fa-scroll {
 }
 
 .about {
-  height: 80vh;
+  min-height: 100vh;
+  margin: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headshotContainer, .aboutInfo {
+  width: calc(50% - 10px);
+}
+
+.headshotContainer {
+  margin-right: 20px;
+}
+
+.aboutInfo h3 {
+  color: #F4D06F;
+  margin: 5px 0;
+}
+
+.aboutInfo > p {
+  margin: 15px 0;
+}
+
+.aboutInfo .button {
+  margin: 15px 5px 30px 5px;
+}
+
+.aboutInfo .button:hover, .aboutInfo .button:focus {
+  color: #F4D06F;
+  border: 2px solid #F4D06F;
+  -webkit-transform: scaleX(1.07);
+          transform: scaleX(1.07);
+  -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, transform .3s;
+  transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+.skills-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.skills-box h4 {
+  width: 100%;
+}
+
+.skills-box .skill {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 100%;
+}
+
+.skills-box p {
+  text-align: center;
+  margin: 7px 0;
+}
+
+.skills-box .javascript img {
+  width: 150%;
+  padding-bottom: 4px;
+}
+
+.skills-box .jquery div {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #0868AC;
+  padding-bottom: 3px;
+}
+
+.skills-box .react img {
+  width: 80px;
+  padding-bottom: 3px;
+}
+
+.skills-box .firebase {
+  width: 15%;
 }
