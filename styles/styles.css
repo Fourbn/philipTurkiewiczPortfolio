@@ -467,3 +467,93 @@ header .skipToContent .fa-scroll {
 .skills-box .firebase {
   width: 15%;
 }
+
+.projects h2,
+.projects h2 + h3 {
+  text-align: center;
+  margin: 0px auto;
+  width: 45%;
+}
+
+.projects h2 {
+  margin-top: 80px;
+}
+
+.projects h2 + h3 {
+  color: #A2FAA3;
+  margin-bottom: 80px;
+}
+
+.projects section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.projects section .projectDescription {
+  background: #140E1A;
+  border-top: 2px solid #5BCEFA;
+  width: 45%;
+  padding: 60px 60px 60px 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  left: 40px;
+}
+
+.projects section .projectDescription h3 {
+  color: #5BCEFA;
+}
+
+.projects section .projectDescription h4 {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.projects section .projectDescription p {
+  margin: 20px 60px 20px 0;
+}
+
+.projects section .projectDescription .button {
+  max-width: 180px;
+  text-align: center;
+}
+
+.projects section .projectDescription .button:hover, .projects section .projectDescription .button:focus {
+  color: #5BCEFA;
+  border: 2px solid #5BCEFA;
+  -webkit-transform: scaleX(1.07);
+          transform: scaleX(1.07);
+  -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, transform .3s;
+  transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+.projects section .projectImage {
+  position: absolute;
+  right: -31px;
+}
+
+.projects section .projectImage img {
+  text-align: right;
+}
