@@ -258,8 +258,122 @@ img {
   height: auto;
 }
 
+body {
+  background-color: #140E1A;
+  color: #fff;
+}
+
 .wrapper {
   width: 95%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.button {
+  font-weight: bold;
+  font-size: .8rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border: 2px solid #fff;
+  -webkit-transition: background-color .3s, color .3s;
+  transition: background-color .3s, color .3s;
+}
+
+h1 {
+  font-size: 9.6rem;
+  font-weight: bold;
+  color: #5BCEFA;
+}
+
+h2, h4, .subheading {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: .8rem;
+}
+
+nav {
+  margin: 20px 0;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul li {
+  padding: 10px;
+  font-size: 2.2rem;
+}
+
+nav ul .turkeyLogo {
+  color: #A2FAA3;
+}
+
+nav ul .getInTouch {
+  color: #F5A9B8;
+}
+
+header {
+  min-height: 100vh;
+}
+
+header .headerText {
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerText p:first-child {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 108px;
+}
+
+header .headerText p:last-child {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 108px;
+}
+
+header .skipToContent {
+  font-size: 2.2rem;
+  color: #B57EDC;
+  text-align: center;
+}
+
+header .skipToContent .fa-scroll {
+  padding: 10px;
+}
+
+.about {
+  height: 80vh;
 }

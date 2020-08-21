@@ -11,4 +11,16 @@ $straightBlue: #0868AC;
 
 @mixin button {
    font-weight: bold;
+   font-size: .8rem;
+   color: $white;
+   text-transform: uppercase;
+   padding: 10px 15px;
+   border: 2px solid $white;
+   transition: background-color .3s, color .3s;
+}
+
+@mixin buttonInteractive($background, $fontColor) {
+   background-color: $background;
+   color: $fontColor;
+   transition: background-color .3s, color .3s;
 }

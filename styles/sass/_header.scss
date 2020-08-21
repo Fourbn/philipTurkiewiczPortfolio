@@ -1,0 +1,53 @@
+nav {
+   margin: 20px 0;
+
+   ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+         padding: 10px;
+         font-size: 2.2rem;
+      }
+
+      .turkeyLogo {
+         color: $agenderGreen;
+      }
+
+      .getInTouch {
+         color: $transPink;
+      }
+   }
+}
+
+header {
+   min-height: 100vh;
+
+   .headerText {
+      height: 75vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      & p:first-child {
+         align-self: flex-start;
+         margin-left: 108px;
+      }
+
+      & p:last-child {
+         align-self: flex-end;
+         margin-right: 108px;
+      }
+   }
+
+   .skipToContent {
+      font-size: 2.2rem;
+      color: $genderQueerPurple;
+      text-align: center;
+      
+      .fa-scroll {
+         padding: 10px;
+      }
+   }
+}
