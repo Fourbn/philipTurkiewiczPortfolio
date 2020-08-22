@@ -1,0 +1,76 @@
+footer {
+   border-top: 1px solid $white;
+   padding: 70px 0;
+   display: flex;
+   justify-content: space-between;
+
+   nav {
+      margin: 0;
+
+      ul {
+         display: flex;
+         justify-content: center;
+      }
+      
+      li {
+         font-size: .7rem;
+         margin: 0 5px;
+         padding: 0;
+
+         a {
+            padding: 10px;
+         }
+
+         &:first-child a:hover,
+         &:first-child:focus-within {
+            color: $transPink;
+         }
+
+         &:nth-child(2) a:hover,
+         &:nth-child(2):focus-within {
+            color: $nonBinaryGold;
+         }
+
+         &:nth-child(3) a:hover,
+         &:nth-child(3):focus-within {
+            color: $agenderGreen;
+         }
+
+         &:nth-child(4) a:hover,
+         &:nth-child(4):focus-within {
+            color: $transBlue;
+         }
+
+         &:last-child a:hover,
+         &:last-child:focus-within {
+            color: $genderQueerPurple;
+         }
+      }
+      
+   }
+}
+
+.credits {
+   text-align: center;
+   position: relative;
+   left: 90px;
+   font-size: .8rem;
+
+   span {
+      display: inline-block;
+      padding: 3px;
+   }
+
+   a:hover,
+   a:focus {
+      color: $agenderGreen;
+   }
+}
+
+.fa-heart {
+   color: $transPink;
+}
+
+.fa-eye {
+   color: $agenderGreen;
+}

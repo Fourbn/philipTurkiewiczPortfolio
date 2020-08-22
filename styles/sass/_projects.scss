@@ -1,4 +1,6 @@
 .projects {
+   margin-top: 100px;
+
    h2, 
    h2 + h3 {
       text-align: center;
@@ -6,17 +8,14 @@
       width: 45%;
    }
 
-   h2 {
-      margin-top: 80px;
-   }
-
    h2 + h3 {
       color: $agenderGreen;
-      margin-bottom: 80px;
+      // margin-bottom: 40px;
    }
 
    section {
       height: 100vh;
+      margin: 50px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -25,7 +24,6 @@
 
       .projectDescription {
          background: $background;
-         border-top: 2px solid $transBlue;
          width: 45%;
          padding: 60px 60px 60px 0;
          z-index: 10;
@@ -33,10 +31,6 @@
          flex-direction: column;
          position: relative;
          left: 40px;
-
-         h3 {
-            color: $transBlue;
-         }
 
          h4 {
             order: -1;
@@ -49,11 +43,6 @@
          .button {
             max-width: 180px;
             text-align: center;
-
-            &:hover, 
-            &:focus {
-               @include buttonInteractive($transBlue);
-            }
          }
       }
 
@@ -64,6 +53,81 @@
          img {
             text-align: right;
          }
+      }
+   }
+
+   .projectTwo, .projectFour {
+      align-items: flex-end;
+
+      .projectDescription {
+         padding: 60px 0 60px 100px;
+         position: relative;
+         right: 40px;
+         left: auto;
+      }
+
+      .projectImage {
+         left: -31px;
+      }
+   }
+
+   .projectOne {
+      .projectDescription {
+         border-top: 3px solid $transBlue;
+      }
+
+      h3 {
+         color: $transBlue
+      }
+
+      .button:hover,
+      .button:focus {
+         @include buttonInteractive($transBlue); 
+      }
+   }
+
+   .projectTwo {
+      .projectDescription {
+         border-top: 3px solid $transPink;
+      }
+
+      h3 {
+         color: $transPink;
+      }
+
+      .button:hover,
+      .button:focus {
+         @include buttonInteractive($transPink);
+      }
+   }
+
+   .projectThree {
+      .projectDescription {
+         border-top: 3px solid $genderQueerPurple;
+      }
+
+      h3 {
+         color: $genderQueerPurple;
+      }
+
+      .button:hover,
+      .button:focus {
+         @include buttonInteractive($genderQueerPurple);
+      }
+   }
+
+   .projectFour {
+      .projectDescription {
+         border-top: 3px solid $agenderGreen;
+      }
+
+      h3 {
+         color: $agenderGreen;
+      }
+
+      .button:hover, 
+      .button:focus {
+         @include buttonInteractive($agenderGreen);
       }
    }
 }

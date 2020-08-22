@@ -1,0 +1,19 @@
+.contact {
+   min-height: 100vh;
+   text-align: center;
+   padding-top: 50px;
+
+   h3 {
+      color: $nonBinaryGold;
+   }
+   
+   p {
+      width: 50%;
+      margin: 60px auto;
+   }
+
+   .button:hover, 
+   .button:focus {
+      @include buttonInteractive($nonBinaryGold);
+   }
+}

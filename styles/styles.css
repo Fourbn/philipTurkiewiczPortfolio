@@ -264,7 +264,7 @@ body {
 }
 
 .wrapper {
-  width: 95%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -468,6 +468,10 @@ header .skipToContent .fa-scroll {
   width: 15%;
 }
 
+.projects {
+  margin-top: 100px;
+}
+
 .projects h2,
 .projects h2 + h3 {
   text-align: center;
@@ -475,17 +479,13 @@ header .skipToContent .fa-scroll {
   width: 45%;
 }
 
-.projects h2 {
-  margin-top: 80px;
-}
-
 .projects h2 + h3 {
   color: #A2FAA3;
-  margin-bottom: 80px;
 }
 
 .projects section {
   height: 100vh;
+  margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,7 +504,6 @@ header .skipToContent .fa-scroll {
 
 .projects section .projectDescription {
   background: #140E1A;
-  border-top: 2px solid #5BCEFA;
   width: 45%;
   padding: 60px 60px 60px 0;
   z-index: 10;
@@ -517,10 +516,6 @@ header .skipToContent .fa-scroll {
           flex-direction: column;
   position: relative;
   left: 40px;
-}
-
-.projects section .projectDescription h3 {
-  color: #5BCEFA;
 }
 
 .projects section .projectDescription h4 {
@@ -538,7 +533,42 @@ header .skipToContent .fa-scroll {
   text-align: center;
 }
 
-.projects section .projectDescription .button:hover, .projects section .projectDescription .button:focus {
+.projects section .projectImage {
+  position: absolute;
+  right: -31px;
+}
+
+.projects section .projectImage img {
+  text-align: right;
+}
+
+.projects .projectTwo, .projects .projectFour {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.projects .projectTwo .projectDescription, .projects .projectFour .projectDescription {
+  padding: 60px 0 60px 100px;
+  position: relative;
+  right: 40px;
+  left: auto;
+}
+
+.projects .projectTwo .projectImage, .projects .projectFour .projectImage {
+  left: -31px;
+}
+
+.projects .projectOne .projectDescription {
+  border-top: 3px solid #5BCEFA;
+}
+
+.projects .projectOne h3 {
+  color: #5BCEFA;
+}
+
+.projects .projectOne .button:hover,
+.projects .projectOne .button:focus {
   color: #5BCEFA;
   border: 2px solid #5BCEFA;
   -webkit-transform: scaleX(1.07);
@@ -549,11 +579,168 @@ header .skipToContent .fa-scroll {
   transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
 }
 
-.projects section .projectImage {
-  position: absolute;
-  right: -31px;
+.projects .projectTwo .projectDescription {
+  border-top: 3px solid #F5A9B8;
 }
 
-.projects section .projectImage img {
-  text-align: right;
+.projects .projectTwo h3 {
+  color: #F5A9B8;
+}
+
+.projects .projectTwo .button:hover,
+.projects .projectTwo .button:focus {
+  color: #F5A9B8;
+  border: 2px solid #F5A9B8;
+  -webkit-transform: scaleX(1.07);
+          transform: scaleX(1.07);
+  -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, transform .3s;
+  transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+.projects .projectThree .projectDescription {
+  border-top: 3px solid #B57EDC;
+}
+
+.projects .projectThree h3 {
+  color: #B57EDC;
+}
+
+.projects .projectThree .button:hover,
+.projects .projectThree .button:focus {
+  color: #B57EDC;
+  border: 2px solid #B57EDC;
+  -webkit-transform: scaleX(1.07);
+          transform: scaleX(1.07);
+  -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, transform .3s;
+  transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+.projects .projectFour .projectDescription {
+  border-top: 3px solid #A2FAA3;
+}
+
+.projects .projectFour h3 {
+  color: #A2FAA3;
+}
+
+.projects .projectFour .button:hover,
+.projects .projectFour .button:focus {
+  color: #A2FAA3;
+  border: 2px solid #A2FAA3;
+  -webkit-transform: scaleX(1.07);
+          transform: scaleX(1.07);
+  -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, transform .3s;
+  transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+.contact {
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.contact h3 {
+  color: #F4D06F;
+}
+
+.contact p {
+  width: 50%;
+  margin: 60px auto;
+}
+
+.contact .button:hover,
+.contact .button:focus {
+  color: #F4D06F;
+  border: 2px solid #F4D06F;
+  -webkit-transform: scaleX(1.07);
+          transform: scaleX(1.07);
+  -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, -webkit-transform .3s;
+  transition: border .3s, color .3s, transform .3s;
+  transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+footer {
+  border-top: 1px solid #fff;
+  padding: 70px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer nav {
+  margin: 0;
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer nav li {
+  font-size: .7rem;
+  margin: 0 5px;
+  padding: 0;
+}
+
+footer nav li a {
+  padding: 10px;
+}
+
+footer nav li:first-child a:hover, footer nav li:first-child:focus-within {
+  color: #F5A9B8;
+}
+
+footer nav li:nth-child(2) a:hover, footer nav li:nth-child(2):focus-within {
+  color: #F4D06F;
+}
+
+footer nav li:nth-child(3) a:hover, footer nav li:nth-child(3):focus-within {
+  color: #A2FAA3;
+}
+
+footer nav li:nth-child(4) a:hover, footer nav li:nth-child(4):focus-within {
+  color: #5BCEFA;
+}
+
+footer nav li:last-child a:hover, footer nav li:last-child:focus-within {
+  color: #B57EDC;
+}
+
+.credits {
+  text-align: center;
+  position: relative;
+  left: 90px;
+  font-size: .8rem;
+}
+
+.credits span {
+  display: inline-block;
+  padding: 3px;
+}
+
+.credits a:hover,
+.credits a:focus {
+  color: #A2FAA3;
+}
+
+.fa-heart {
+  color: #F5A9B8;
+}
+
+.fa-eye {
+  color: #A2FAA3;
 }
