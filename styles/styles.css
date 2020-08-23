@@ -226,6 +226,22 @@ html {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url("../../fonts/SpaceGrotesk-1.1.6/webfont/SpaceGrotesk-Regular.woff2"), url("../../fonts/SpaceGrotesk-1.1.6/webfont/SpaceGrotesk-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url("../../fonts/SpaceGrotesk-1.1.6/webfont/SpaceGrotesk-Bold.woff2"), url("../../fonts/SpaceGrotesk-1.1.6/webfont/SpaceGrotesk-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   font-size: 125%;
 }
@@ -270,8 +286,11 @@ body {
 }
 
 .button {
-  font-weight: bold;
-  font-size: .8rem;
+  font-family: 'Space Grotesk';
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: normal;
   color: #fff;
   text-transform: uppercase;
   padding: 10px 25px;
@@ -284,28 +303,45 @@ body {
 }
 
 h1 {
+  font-family: 'Space Grotesk';
   font-size: 9.6rem;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
   color: #5BCEFA;
 }
 
 h2, h4, .subheading {
-  font-weight: bold;
+  font-family: 'Space Grotesk';
   font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 2;
   text-transform: uppercase;
 }
 
 h3 {
-  font-weight: bold;
+  font-family: 'Space Grotesk';
   font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: normal;
 }
 
 h4 {
+  font-family: 'Space Grotesk';
   font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  line-height: 2;
 }
 
 p {
-  font-size: .8rem;
+  font-family: 'Space Grotesk';
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 
 nav {
@@ -515,7 +551,7 @@ header .skipToContent .fa-scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  left: 40px;
+  left: 20px;
 }
 
 .projects section .projectDescription h4 {
@@ -535,7 +571,7 @@ header .skipToContent .fa-scroll {
 
 .projects section .projectImage {
   position: absolute;
-  right: -31px;
+  right: -63px;
 }
 
 .projects section .projectImage img {
@@ -549,14 +585,14 @@ header .skipToContent .fa-scroll {
 }
 
 .projects .projectTwo .projectDescription, .projects .projectFour .projectDescription {
-  padding: 60px 0 60px 100px;
+  padding: 60px 0 60px 80px;
   position: relative;
-  right: 40px;
+  right: 20px;
   left: auto;
 }
 
 .projects .projectTwo .projectImage, .projects .projectFour .projectImage {
-  left: -31px;
+  left: -63px;
 }
 
 .projects .projectOne .projectDescription {

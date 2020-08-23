@@ -51,26 +51,23 @@ body {
 
 // TYPOGRAPHY
 h1 {
-   font-size: 9.6rem;
-   font-weight: bold;
+   @include fontStyle(9.6rem, 700, 0);
    color: $transBlue;
    }
 
 h2, h4, .subheading {
-   font-weight: bold;
-   font-size: 1.2rem;
+   @include fontStyle(1.2rem, 700, 3px, 2);
    text-transform: uppercase;
 }
 
 h3 {
-   font-weight: bold;
-   font-size: 3.6rem;
+   @include fontStyle(3.6rem, 700, 2px);
 }
 
 h4 {
-   font-size: 1rem;
+   @include fontStyle(1rem, 700, 4px, 2);
 }
 
 p {
-   font-size: .8rem;
+   @include fontStyle(.8rem, 400, 0, 1.5);
 }
