@@ -19,6 +19,13 @@ footer {
 
          a {
             padding: 10px;
+            transition: transform .3s, color .3s;
+         }
+
+         a:hover, 
+         &:focus-within {
+            transform: scale(1.6);
+            transition: transform .3s, color .3s;
          }
 
          &:first-child a:hover,

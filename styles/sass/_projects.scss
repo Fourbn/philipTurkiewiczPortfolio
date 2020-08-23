@@ -1,20 +1,18 @@
 .projects {
-   margin-top: 100px;
+   margin-top: 150px;
 
    h2, 
    h2 + h3 {
       text-align: center;
       margin: 0px auto;
-      width: 45%;
    }
 
    h2 + h3 {
       color: $agenderGreen;
-      // margin-bottom: 40px;
    }
 
    section {
-      height: 100vh;
+      height: 150vh;
       margin: 50px 0;
       display: flex;
       flex-direction: column;
@@ -24,13 +22,14 @@
 
       .projectDescription {
          background: $background;
-         width: 45%;
+         width: 550px;
+         min-width: 50%;
          padding: 60px 60px 60px 0;
          z-index: 10;
          display: flex;
          flex-direction: column;
          position: relative;
-         left: 20px;
+         left: -10px;
 
          h4 {
             order: -1;
@@ -41,7 +40,7 @@
          }
 
          .button {
-            max-width: 180px;
+            max-width: 200px;
             text-align: center;
          }
       }
@@ -62,7 +61,7 @@
       .projectDescription {
          padding: 60px 0 60px 80px;
          position: relative;
-         right: 20px;
+         right: -10px;
          left: auto;
       }
 

@@ -293,7 +293,7 @@ body {
   line-height: normal;
   color: #fff;
   text-transform: uppercase;
-  padding: 10px 25px;
+  padding: 13px 25px;
   border: 2px solid #fff;
   border-radius: 1px;
   -webkit-transition: background-color .3s, color .3s, -webkit-transform .3s;
@@ -415,7 +415,7 @@ header .skipToContent .fa-scroll {
 
 .about {
   min-height: 100vh;
-  margin: 50px;
+  margin: 150px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,17 +432,22 @@ header .skipToContent .fa-scroll {
   margin-right: 20px;
 }
 
+.aboutInfo h2 {
+  padding-left: 3px;
+  margin-bottom: -10px;
+}
+
 .aboutInfo h3 {
   color: #F4D06F;
   margin: 5px 0;
 }
 
 .aboutInfo > p {
-  margin: 15px 0;
+  margin: 20px 0;
 }
 
 .aboutInfo .button {
-  margin: 15px 5px 30px 5px;
+  margin: 25px 5px 55px 5px;
 }
 
 .aboutInfo .button:hover, .aboutInfo .button:focus {
@@ -468,6 +473,8 @@ header .skipToContent .fa-scroll {
 }
 
 .skills-box h4 {
+  font-size: .9rem;
+  padding-left: 8px;
   width: 100%;
 }
 
@@ -475,44 +482,64 @@ header .skipToContent .fa-scroll {
   -ms-flex-item-align: end;
       align-self: flex-end;
   height: 100%;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.skills-box .skill:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 .skills-box p {
+  font-size: .6rem;
   text-align: center;
   margin: 7px 0;
 }
 
+.skills-box .html img,
+.skills-box .css img {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .skills-box .javascript img {
-  width: 150%;
+  width: 70%;
   padding-bottom: 4px;
+  margin: 0 auto;
 }
 
 .skills-box .jquery div {
-  width: 75px;
-  height: 75px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   background-color: #0868AC;
   padding-bottom: 3px;
 }
 
 .skills-box .react img {
-  width: 80px;
+  width: 90%;
   padding-bottom: 3px;
 }
 
 .skills-box .firebase {
-  width: 15%;
+  width: 12.5%;
 }
 
 .projects {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .projects h2,
 .projects h2 + h3 {
   text-align: center;
   margin: 0px auto;
-  width: 45%;
 }
 
 .projects h2 + h3 {
@@ -520,7 +547,7 @@ header .skipToContent .fa-scroll {
 }
 
 .projects section {
-  height: 100vh;
+  height: 150vh;
   margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,7 +567,8 @@ header .skipToContent .fa-scroll {
 
 .projects section .projectDescription {
   background: #140E1A;
-  width: 45%;
+  width: 550px;
+  min-width: 50%;
   padding: 60px 60px 60px 0;
   z-index: 10;
   display: -webkit-box;
@@ -551,7 +579,7 @@ header .skipToContent .fa-scroll {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  left: 20px;
+  left: -10px;
 }
 
 .projects section .projectDescription h4 {
@@ -565,7 +593,7 @@ header .skipToContent .fa-scroll {
 }
 
 .projects section .projectDescription .button {
-  max-width: 180px;
+  max-width: 200px;
   text-align: center;
 }
 
@@ -587,7 +615,7 @@ header .skipToContent .fa-scroll {
 .projects .projectTwo .projectDescription, .projects .projectFour .projectDescription {
   padding: 60px 0 60px 80px;
   position: relative;
-  right: 20px;
+  right: -10px;
   left: auto;
 }
 
@@ -734,6 +762,19 @@ footer nav li {
 
 footer nav li a {
   padding: 10px;
+  -webkit-transition: color .3s, -webkit-transform .3s;
+  transition: color .3s, -webkit-transform .3s;
+  transition: transform .3s, color .3s;
+  transition: transform .3s, color .3s, -webkit-transform .3s;
+}
+
+footer nav li a:hover, footer nav li:focus-within {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  -webkit-transition: color .3s, -webkit-transform .3s;
+  transition: color .3s, -webkit-transform .3s;
+  transition: transform .3s, color .3s;
+  transition: transform .3s, color .3s, -webkit-transform .3s;
 }
 
 footer nav li:first-child a:hover, footer nav li:first-child:focus-within {
