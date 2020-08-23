@@ -30,14 +30,31 @@ header {
       flex-direction: column;
       align-items: center;
 
+      h1 {
+         opacity: 0;
+      }
+
+      .developer, 
+      .debutante, 
+      .doofus {
+         color: $background;
+      }
+
+      .transition {
+         color: $white;
+         transition: color 3s;
+      }
+
       & p:first-child {
          align-self: flex-start;
-         margin-left: 108px;
+         margin-left: 82px;
+         margin-bottom: 25px;
+         opacity: 0;
       }
 
       & p:last-child {
          align-self: flex-end;
-         margin-right: 108px;
+         margin-right: 78px;
       }
    }
 

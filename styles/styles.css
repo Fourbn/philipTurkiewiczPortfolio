@@ -391,16 +391,34 @@ header .headerText {
           align-items: center;
 }
 
+header .headerText h1 {
+  opacity: 0;
+}
+
+header .headerText .developer,
+header .headerText .debutante,
+header .headerText .doofus {
+  color: #140E1A;
+}
+
+header .headerText .transition {
+  color: #fff;
+  -webkit-transition: color 3s;
+  transition: color 3s;
+}
+
 header .headerText p:first-child {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-left: 108px;
+  margin-left: 82px;
+  margin-bottom: 25px;
+  opacity: 0;
 }
 
 header .headerText p:last-child {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin-right: 108px;
+  margin-right: 78px;
 }
 
 header .skipToContent {
