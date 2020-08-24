@@ -363,7 +363,7 @@ header {
 }
 
 header .headerText {
-  min-height: 75vh;
+  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,15 +416,23 @@ header .skipToContent .fa-scroll {
 
 .about {
   min-height: 100vh;
-  margin: 150px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 150px 2.5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.headshotContainer {
+  grid-column: 1 / -1;
+  margin: 0 auto;
+}
+
+.aboutInfo {
+  grid-column: 1 / -1;
 }
 
 .aboutInfo h2 {
@@ -457,12 +465,13 @@ header .skipToContent .fa-scroll {
 }
 
 .skills-box {
-  width: 100%;
+  grid-column: 1 / -1;
+  width: 90%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(70px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  grid-gap: 9px;
+  grid-gap: 1fr;
 }
 
 .skills-box h4 {
@@ -473,11 +482,12 @@ header .skipToContent .fa-scroll {
 }
 
 .skills-box .skill {
-  justify-self: center;
+  justify-self: flex-start;
   -ms-flex-item-align: center;
       align-self: center;
   height: 100%;
   margin: 3px;
+  padding-left: 8px;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
   transition: transform .3s;
@@ -557,7 +567,12 @@ header .skipToContent .fa-scroll {
       justify-self: center;
 }
 
+.projects .imageContainer img {
+  width: auto;
+}
+
 .projects .description {
+  background: #140E1A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -815,12 +830,135 @@ footer nav li:last-child a:hover, footer nav li:last-child:focus-within {
     text-align: left;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    padding-left: 12px;
+    padding-left: 7%;
   }
   .headerText p:last-child {
     text-align: right;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    padding-right: 10px;
+    padding-right: 5%;
+  }
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(50px, 1fr))[12];
+        grid-template-columns: repeat(12, minmax(50px, 1fr));
+    grid-gap: 5px;
+  }
+  .headshotContainer {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / span 6;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .aboutInfo {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / span 6;
+  }
+  .skills-box {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / span 6;
+    -ms-grid-columns: (minmax(85px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+  }
+  .projects {
+    -ms-grid-columns: (minmax(52px, 1fr))[12];
+        grid-template-columns: repeat(12, minmax(52px, 1fr));
+  }
+  .projects .heading {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .projects .description {
+    grid-column: 2 / -2;
+    position: relative;
+    top: -50px;
+    padding: 40px 40px 0 40px;
+  }
+  .projects .description p {
+    margin: 22px 0 31px 0;
+  }
+  .contact {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 9.6rem;
+  }
+  h2, h4, .subheading {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 3.6rem;
+  }
+  .turkeyLogo,
+  .getInTouch {
+    width: 100px;
+  }
+  .projects {
+    -ms-grid-columns: (minmax(65px, 1fr))[12];
+        grid-template-columns: repeat(12, minmax(65px, 1fr));
+    grid-gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .description {
+    margin-bottom: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    position: static;
+  }
+  .projects .projectOne.description,
+  .projects .projectThree.description {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2 / span 6;
+    padding: 20px 15% 20px 0;
+  }
+  .projects .projectOne.imageContainer,
+  .projects .projectThree.imageContainer {
+    margin: 20vh 0;
+    grid-column: 7 / -1;
+  }
+  .projects .projectTwo.description,
+  .projects .projectFour.description {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 6;
+    grid-column: 6 / span 6;
+    padding: 20px 0 20px 15%;
+  }
+  .projects .projectTwo.imageContainer,
+  .projects .projectFour.imageContainer {
+    margin: 20vh 0;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / span 6;
+  }
+  .projects .projectOne {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .projects .projectTwo {
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .projects .projectThree {
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .projects .projectFour {
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  .contact p {
+    width: 50%;
   }
 }

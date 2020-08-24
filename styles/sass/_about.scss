@@ -1,12 +1,19 @@
 .about {
    min-height: 100vh;
-   margin: 150px auto;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+   margin: 150px 2.5%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+   align-items: flex-start;
+}
+
+.headshotContainer {
+   grid-column: 1 / -1;
+   margin: 0 auto;
 }
 
 .aboutInfo {
+   grid-column: 1 / -1;
+
    h2 {
       padding-left: 3px;
       margin-bottom: -5px;
@@ -33,10 +40,11 @@
 }
 
 .skills-box {
-   width: 100%;
+   grid-column: 1 / -1;
+   width: 90%;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-   grid-gap: 9px;
+   grid-gap: 1fr;
 
 
    h4 {
@@ -47,10 +55,11 @@
    }
 
    .skill {
-      justify-self: center;
+      justify-self: flex-start;
       align-self: center;
       height: 100%;
       margin: 3px;
+      padding-left: 8px;
       transition: transform .3s;
       display: flex;
       flex-direction: column;

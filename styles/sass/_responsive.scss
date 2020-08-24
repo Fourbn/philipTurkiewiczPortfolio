@@ -1,5 +1,5 @@
 // ===================================================
-// mobile: 375px 
+// MOBILE: 375px 
 // font size change to better reflect design
 @media (min-width: 375px) {
    h1 {
@@ -19,7 +19,9 @@
 }
 
 // ===================================================
-// tablet: 768px
+// TABLET: 768px
+// h1 font size adjusted
+// header, about, projects, contact section layout changes
 @media (min-width: 768px) {
    // FONT
    h1 {
@@ -30,13 +32,140 @@
    .headerText p:first-child {
       text-align: left;
       align-self: flex-start;
-      padding-left: 12px;
+      padding-left: 7%;
    }
 
    .headerText p:last-child {
       text-align: right;
       align-self: flex-end;
-      padding-right: 10px;
+      padding-right: 5%;
    }
 
+   // ABOUT SECTION
+   .about {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(50px, 1fr));
+      grid-gap: 5px;
+   }
+
+   .headshotContainer {
+      grid-column: 1 / span 6;
+      align-self: center;
+   }
+
+   .aboutInfo {
+      grid-column: 7 / span 6;
+   }
+
+   .skills-box {
+      grid-column: 7 / span 6;
+      grid-template-columns: repeat(auto-fit, minmax(85px, 1fr))
+   }
+
+   // PROJECTS SECTION
+   .projects {
+      grid-template-columns: repeat(12, minmax(52px, 1fr));
+
+      .heading {
+         text-align: center;
+         padding-bottom: 40px;
+      }
+
+      .description {
+         grid-column: 2 / -2;
+         position: relative;
+         top: -50px;
+         padding: 40px 40px 0 40px;
+
+         p {
+            margin: 22px 0 31px 0;
+         }
+      }
+   }
+
+   // CONTACT SECTION
+   .contact {
+      text-align: center;
+   }
+}
+
+// ===================================================
+// DESKTOP: 768px
+@media (min-width: 1200px) {
+   // FONTS
+   h1 {
+      font-size: 9.6rem;
+   }
+   h2, h4, .subheading {
+      font-size: 1.2rem;
+   }
+
+   h3 {
+      font-size: 3.6rem;
+   }
+
+   .turkeyLogo, 
+   .getInTouch {
+      width: 100px;
+   }
+
+   // PROJECTS SECTION
+   .projects {
+      grid-template-columns: repeat(12, minmax(65px, 1fr));
+      grid-gap: 30px;
+      align-items: center;
+
+      .description {
+         margin-bottom: 0;
+         align-self: center;
+         position: static;
+      }
+      
+      .projectOne.description, 
+      .projectThree.description {
+         grid-column: 2 / span 6;
+         padding: 20px 15% 20px 0;
+      }
+
+      .projectOne.imageContainer, 
+      .projectThree.imageContainer {
+         margin: 20vh 0;
+         grid-column: 7 / -1;
+      }
+
+      .projectTwo.description, 
+      .projectFour.description {
+         grid-column: 6 / span 6;
+         padding: 20px 0 20px 15%;
+      }
+
+      .projectTwo.imageContainer, 
+      .projectFour.imageContainer {
+         margin: 20vh 0;
+         grid-column: 1 / span 6;
+      }
+
+      .projectOne {
+         grid-row: 2;
+      }
+
+      .projectTwo {
+         grid-row: 3;
+      }
+
+      .projectThree {
+         grid-row: 4;
+      }
+
+      .projectFour {
+         grid-row: 5;
+      }
+   }
+
+   // CONTACT SECTION
+   .contact {
+      p {
+         width: 50%;
+      }
+   }
 }
