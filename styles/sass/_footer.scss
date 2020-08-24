@@ -1,11 +1,14 @@
 footer {
    border-top: 1px solid $white;
-   padding: 70px 0;
+   padding: 40px 0;
    display: flex;
-   justify-content: space-between;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
 
    nav {
       margin: 0;
+      width: 100%;
 
       ul {
          display: flex;
@@ -20,6 +23,10 @@ footer {
          a {
             padding: 10px;
             transition: transform .3s, color .3s;
+         }
+
+         img {
+            width: 14px;
          }
 
          a:hover, 
@@ -43,6 +50,7 @@ footer {
             color: $agenderGreen;
          }
 
+         // currently not working :'(
          &:nth-child(4) a:hover,
          &:nth-child(4):focus-within {
             color: $transBlue;
@@ -59,13 +67,15 @@ footer {
 
 .credits {
    text-align: center;
-   position: relative;
-   left: 90px;
-   font-size: .8rem;
+   width: 100%;
+   padding: 35px 0;
 
    span {
       display: inline-block;
+      position: relative;
+      top: -1px;
       padding: 3px;
+      font-size: .7rem;
    }
 
    a:hover,
@@ -78,6 +88,6 @@ footer {
    color: $transPink;
 }
 
-.fa-eye {
+.fa-paint-brush {
    color: $agenderGreen;
 }

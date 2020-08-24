@@ -1,22 +1,22 @@
 .about {
    min-height: 100vh;
-   margin: 150px 0;
-   display: flex;
-   align-items: center;
-
-}
-.headshotContainer, .aboutInfo {
-   width: calc(50% - 10px);
+   margin: 150px 2.5%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+   align-items: flex-start;
 }
 
 .headshotContainer {
-   margin-right: 20px;
+   grid-column: 1 / -1;
+   margin: 0 auto;
 }
 
 .aboutInfo {
+   grid-column: 1 / -1;
+
    h2 {
       padding-left: 3px;
-      margin-bottom: -10px;
+      margin-bottom: -5px;
    }
 
    h3 {
@@ -29,6 +29,7 @@
    }
 
    .button {
+      // with a new button hover, should change the margin-left 5px back to 0 for better alignment
       margin: 25px 5px 55px 5px;
 
       &:hover, 
@@ -39,24 +40,38 @@
 }
 
 .skills-box {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
+   grid-column: 1 / -1;
+   width: 90%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+   grid-gap: 1fr;
+
 
    h4 {
       font-size: .9rem;
       padding-left: 8px;
       width: 100%;
+      grid-column: 1 / -1;
    }
 
    .skill {
-      align-self: flex-end;
+      justify-self: flex-start;
+      align-self: center;
       height: 100%;
+      margin: 3px;
+      padding-left: 8px;
       transition: transform .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
       &:hover {
          transform: scale(1.2);
          transition: transform .3s;
+      }
+
+      img {
+         margin: 0 auto;
       }
    }
 
@@ -67,31 +82,20 @@
    }
 
    .html img, 
-   .css img{
-      width: 70%;
-      margin: 0 auto;
-   }
-
+   .css img,
    .javascript img {
-      width: 70%;
-      padding-bottom: 4px;
-      margin: 0 auto;
+      width: 60px;
    }
 
-   .jquery div {
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background-color: $straightBlue;
-      padding-bottom: 3px;
-   }
-
-   .react img {
-      width: 90%;
-      padding-bottom: 3px;
-   }
-
-   .firebase {
-      width: 12.5%;
+   .jquery img, 
+   .react img, 
+   .firebase img {
+      width: 70px;
    } 
+
+
+   .javascript img, 
+   .react img {
+      padding-bottom: 3px;
+   }
 }
