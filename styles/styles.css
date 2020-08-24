@@ -244,6 +244,7 @@ html {
 
 html {
   font-size: 125%;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -336,11 +337,6 @@ p {
   line-height: 1.5;
 }
 
-.turkeyLogo,
-.getInTouch {
-  width: 75px;
-}
-
 nav {
   margin: 20px 0;
 }
@@ -356,6 +352,34 @@ nav ul {
 
 nav ul li {
   padding: 10px;
+}
+
+nav .getInTouch {
+  width: 100px;
+}
+
+nav .getInTouch a {
+  padding: 5px;
+  width: 100%;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+nav .getInTouch a:hover, nav .getInTouch afocus {
+  -webkit-transform: rotate(182deg);
+          transform: rotate(182deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.turkeyLogo img {
+  width: 90px;
 }
 
 header {
@@ -719,6 +743,10 @@ footer {
           align-items: center;
 }
 
+footer .turkeyLogo {
+  position: relative;
+}
+
 footer nav {
   margin: 0;
   width: 100%;
@@ -885,6 +913,16 @@ footer nav li:last-child a:hover, footer nav li:last-child:focus-within {
   .contact {
     text-align: center;
   }
+  .contact p {
+    width: 50%;
+  }
+  .speechBubble {
+    width: 150px;
+    height: 80px;
+    position: absolute;
+    top: -42px;
+    left: 92px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -958,7 +996,19 @@ footer nav li:last-child a:hover, footer nav li:last-child:focus-within {
     -ms-grid-row: 5;
     grid-row: 5;
   }
-  .contact p {
-    width: 50%;
+  footer {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .turkeyLogo, footer .credits, footer nav {
+    width: 30%;
+  }
+  footer nav ul {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }

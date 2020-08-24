@@ -86,6 +86,20 @@
    // CONTACT SECTION
    .contact {
       text-align: center;
+
+      p {
+         width: 50%;
+      }
+   }
+
+   // FOOTER
+   // this will be a thing eventually
+   .speechBubble {
+      width: 150px;
+      height: 80px;
+      position: absolute;
+      top: -42px;
+      left: 92px;
    }
 }
 
@@ -162,10 +176,17 @@
       }
    }
 
-   // CONTACT SECTION
-   .contact {
-      p {
-         width: 50%;
+   // FOOTER
+   footer {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      .turkeyLogo, .credits, nav {
+         width: 30%;
+      }
+
+      nav ul {
+         justify-content: flex-end;
       }
    }
 }

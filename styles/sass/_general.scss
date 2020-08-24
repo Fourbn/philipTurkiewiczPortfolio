@@ -2,6 +2,7 @@
 // STRIPPING OF DEFAULT STYLES
 html {
    font-size: 125%;
+   scroll-behavior: smooth;
 }
 
 h1,
@@ -71,10 +72,5 @@ h3 {
 
 p {
    @include fontStyle(.6rem, 400, 0, 1.5);
-}
-
-.turkeyLogo, 
-.getInTouch {
-   width: 75px;
 }
 // ===================================================

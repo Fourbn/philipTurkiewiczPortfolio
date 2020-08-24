@@ -9,6 +9,27 @@ nav {
          padding: 10px;
       }
    }
+
+   .getInTouch {
+      width: 100px;
+
+      a {
+         padding: 5px;
+         width: 100%;
+         transform: rotate(-30deg);
+         transition: transform 1s;
+      
+         &:hover,
+         &focus {
+            transform: rotate(182deg);
+            transition: transform 1s;
+         }
+      }
+   }
+}
+
+.turkeyLogo img {
+   width: 90px;
 }
 
 header {
