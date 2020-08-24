@@ -344,6 +344,11 @@ p {
   line-height: 1.5;
 }
 
+.turkeyLogo,
+.getInTouch {
+  width: 8%;
+}
+
 nav {
   margin: 20px 0;
 }
@@ -359,15 +364,6 @@ nav ul {
 
 nav ul li {
   padding: 10px;
-  font-size: 2.2rem;
-}
-
-nav ul .turkeyLogo {
-  color: #A2FAA3;
-}
-
-nav ul .getInTouch {
-  color: #F5A9B8;
 }
 
 header {
@@ -422,9 +418,9 @@ header .headerText p:last-child {
 }
 
 header .skipToContent {
-  font-size: 2.2rem;
+  width: 5%;
   color: #B57EDC;
-  text-align: center;
+  margin: 0 auto;
 }
 
 header .skipToContent .fa-scroll {
@@ -437,6 +433,8 @@ header .skipToContent .fa-scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -448,6 +446,7 @@ header .skipToContent .fa-scroll {
 
 .headshotContainer {
   margin-right: 20px;
+  padding-bottom: 40px;
 }
 
 .aboutInfo h2 {
@@ -480,6 +479,7 @@ header .skipToContent .fa-scroll {
 }
 
 .skills-box {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,61 +533,60 @@ header .skipToContent .fa-scroll {
   margin: 0 auto;
 }
 
-.skills-box .jquery div {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background-color: #0868AC;
-  padding-bottom: 3px;
+.skills-box .jquery img {
+  width: 60px;
 }
 
 .skills-box .react img {
-  width: 90%;
-  padding-bottom: 3px;
+  width: 95%;
+  padding-bottom: 2px;
+  margin: 0 auto;
 }
 
 .skills-box .firebase {
-  width: 12.5%;
+  width: 11%;
 }
 
 .projects {
-  margin-top: 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (minmax(fit-content, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(-webkit-fit-content, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(fit-content, 1fr));
+  -ms-grid-columns: (minmax(65px, 1fr))[12];
+      grid-template-columns: repeat(12, minmax(65px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-auto-flow: columns;
+  grid-auto-columns: minmax(65px, 1fr);
+  grid-gap: 30px;
 }
 
-.projects h2,
-.projects h2 + h3 {
+.projects .heading {
+  grid-column: 1 / -1;
+}
+
+.projects .heading h2,
+.projects .heading h2 + h3 {
   text-align: center;
   margin: 0px auto;
 }
 
-.projects h2 + h3 {
+.projects .heading h2 + h3 {
   color: #A2FAA3;
+  margin-bottom: 200px;
 }
 
-.projects section {
-  height: 150vh;
-  margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: relative;
-}
-
-.projects section .projectDescription {
+.projects .description {
   background: #140E1A;
-  width: 550px;
-  min-width: 50%;
-  padding: 60px 60px 60px 0;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 6;
+      grid-column-end: span 6;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 30px 0px 30px 0;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -596,61 +595,50 @@ header .skipToContent .fa-scroll {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
-  left: -10px;
 }
 
-.projects section .projectDescription h4 {
+.projects .description h4 {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
 }
 
-.projects section .projectDescription p {
+.projects .description p {
   margin: 20px 60px 20px 0;
 }
 
-.projects section .projectDescription .button {
+.projects .description .button {
   max-width: 200px;
   text-align: center;
 }
 
-.projects section .projectImage {
-  position: absolute;
-  right: -63px;
+.projects .imageContainer {
+  -ms-grid-column: 7;
+      grid-column-start: 7;
+  -ms-grid-column-span: 7;
+      grid-column-end: span 7;
 }
 
-.projects section .projectImage img {
-  text-align: right;
+.projects .imageContainer img {
+  width: 100%;
 }
 
-.projects .projectTwo, .projects .projectFour {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.projects .projectTwo .projectDescription, .projects .projectFour .projectDescription {
-  padding: 60px 0 60px 80px;
-  position: relative;
-  right: -10px;
-  left: auto;
-}
-
-.projects .projectTwo .projectImage, .projects .projectFour .projectImage {
-  left: -63px;
-}
-
-.projects .projectOne .projectDescription {
+.projects .projectOne.description,
+.projects .projectOne.imageContainer {
   border-top: 3px solid #5BCEFA;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
-.projects .projectOne h3 {
+.projects .projectOne.description h3,
+.projects .projectOne.imageContainer h3 {
   color: #5BCEFA;
 }
 
-.projects .projectOne .button:hover,
-.projects .projectOne .button:focus {
+.projects .projectOne.description .button:hover,
+.projects .projectOne.description .button:focus,
+.projects .projectOne.imageContainer .button:hover,
+.projects .projectOne.imageContainer .button:focus {
   color: #5BCEFA;
   border: 2px solid #5BCEFA;
   -webkit-transform: scaleX(1.07);
@@ -661,16 +649,22 @@ header .skipToContent .fa-scroll {
   transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
 }
 
-.projects .projectTwo .projectDescription {
+.projects .projectTwo.description,
+.projects .projectTwo.imageContainer {
   border-top: 3px solid #F5A9B8;
+  -ms-grid-row: 3;
+  grid-row: 3;
 }
 
-.projects .projectTwo h3 {
+.projects .projectTwo.description h3,
+.projects .projectTwo.imageContainer h3 {
   color: #F5A9B8;
 }
 
-.projects .projectTwo .button:hover,
-.projects .projectTwo .button:focus {
+.projects .projectTwo.description .button:hover,
+.projects .projectTwo.description .button:focus,
+.projects .projectTwo.imageContainer .button:hover,
+.projects .projectTwo.imageContainer .button:focus {
   color: #F5A9B8;
   border: 2px solid #F5A9B8;
   -webkit-transform: scaleX(1.07);
@@ -681,16 +675,22 @@ header .skipToContent .fa-scroll {
   transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
 }
 
-.projects .projectThree .projectDescription {
+.projects .projectThree.description,
+.projects .projectThree.imageContainer {
   border-top: 3px solid #B57EDC;
+  -ms-grid-row: 4;
+  grid-row: 4;
 }
 
-.projects .projectThree h3 {
+.projects .projectThree.description h3,
+.projects .projectThree.imageContainer h3 {
   color: #B57EDC;
 }
 
-.projects .projectThree .button:hover,
-.projects .projectThree .button:focus {
+.projects .projectThree.description .button:hover,
+.projects .projectThree.description .button:focus,
+.projects .projectThree.imageContainer .button:hover,
+.projects .projectThree.imageContainer .button:focus {
   color: #B57EDC;
   border: 2px solid #B57EDC;
   -webkit-transform: scaleX(1.07);
@@ -701,16 +701,22 @@ header .skipToContent .fa-scroll {
   transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
 }
 
-.projects .projectFour .projectDescription {
+.projects .projectFour.description,
+.projects .projectFour.imageContainer {
   border-top: 3px solid #A2FAA3;
+  -ms-grid-row: 5;
+  grid-row: 5;
 }
 
-.projects .projectFour h3 {
+.projects .projectFour.description h3,
+.projects .projectFour.imageContainer h3 {
   color: #A2FAA3;
 }
 
-.projects .projectFour .button:hover,
-.projects .projectFour .button:focus {
+.projects .projectFour.description .button:hover,
+.projects .projectFour.description .button:focus,
+.projects .projectFour.imageContainer .button:hover,
+.projects .projectFour.imageContainer .button:focus {
   color: #A2FAA3;
   border: 2px solid #A2FAA3;
   -webkit-transform: scaleX(1.07);
@@ -757,6 +763,9 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer nav {
@@ -784,6 +793,10 @@ footer nav li a {
   transition: color .3s, -webkit-transform .3s;
   transition: transform .3s, color .3s;
   transition: transform .3s, color .3s, -webkit-transform .3s;
+}
+
+footer nav li img {
+  width: 14px;
 }
 
 footer nav li a:hover, footer nav li:focus-within {

@@ -71,3 +71,8 @@ h4 {
 p {
    @include fontStyle(.8rem, 400, 0, 1.5);
 }
+
+.turkeyLogo, 
+.getInTouch {
+   width: 8%;
+}

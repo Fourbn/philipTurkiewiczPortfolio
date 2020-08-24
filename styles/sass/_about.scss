@@ -2,6 +2,7 @@
    min-height: 100vh;
    margin: 150px 0;
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
 
 }
@@ -11,6 +12,7 @@
 
 .headshotContainer {
    margin-right: 20px;
+   padding-bottom: 40px;
 }
 
 .aboutInfo {
@@ -39,6 +41,7 @@
 }
 
 .skills-box {
+   width: 100%;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
@@ -78,20 +81,17 @@
       margin: 0 auto;
    }
 
-   .jquery div {
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background-color: $straightBlue;
-      padding-bottom: 3px;
+   .jquery img {
+      width: 60px;
    }
 
    .react img {
-      width: 90%;
-      padding-bottom: 3px;
+      width: 95%;
+      padding-bottom: 2px;
+      margin: 0 auto;
    }
 
    .firebase {
-      width: 12.5%;
+      width: 11%;
    } 
 }
