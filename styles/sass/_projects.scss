@@ -1,130 +1,203 @@
 .projects {
-   // margin-top: 150px;
+   margin-top: 20vh;
    display: grid;
-   grid-template-rows: repeat(auto-fit, minmax(fit-content, 1fr));
-   grid-template-columns: repeat(12, minmax(65px, 1fr));
-   justify-content: center;
-   grid-auto-flow: columns;
-   grid-auto-columns: minmax(65px, 1fr);
-   grid-gap: 30px;
-
-   .heading {
-      grid-column: 1 / -1;
-
-      h2, 
-      h2 + h3 {
-         text-align: center;
-         margin: 0px auto;
-      }
+   grid-template-columns: repeat(6, minmax(50px, 1fr));
+   align-items: flex-start;
    
-      h2 + h3 {
-         color: $agenderGreen;
-         margin-bottom: 200px;
-      }
+   .heading, 
+   .description {
+      grid-column: 1 / -1;
+      padding: 20px 2.5%;
+   }
+
+   h3 {
+      color: $agenderGreen;
+   }
+
+   .imageContainer {
+      grid-column: 1 / -1;
+      justify-self: center;
    }
 
    .description {
-      background: $background;
-      grid-column-start: 2;
-      grid-column-end: span 6;
-      // grid-row: 1;
-      align-self: center;
-      padding: 30px 0px 30px 0;
-      z-index: 10;
       display: flex;
       flex-direction: column;
+      margin-bottom: 20vh;
 
       h4 {
          order: -1;
       }
+
       p {
-         margin: 20px 60px 20px 0;
+         margin: 12px 0 21px 0;
       }
+
       .button {
-         max-width: 200px;
-         text-align: center;
-      }
-   }
-   
-   .imageContainer {
-      grid-column-start: 7;
-      grid-column-end: span 7;
-      // grid-row: 1;
-      // min-width: 600px;
-      
-      img {
-         // text-align: right;
-         width: 100%;
-         // width: 600px;
-      }
-   }
-
-
-
-
-
-
-
-
-
-   .projectOne.description,
-   .projectOne.imageContainer {
-         border-top: 3px solid $transBlue;
-         grid-row: 2;
-
-      h3 {
-         color: $transBlue
-      }
-
-      .button:hover,
-      .button:focus {
-         @include buttonInteractive($transBlue); 
-      }
-   }
-
-   .projectTwo.description,
-   .projectTwo.imageContainer {
-         border-top: 3px solid $transPink;
-         grid-row: 3;
-
-      h3 {
-         color: $transPink;
-      }
-
-      .button:hover,
-      .button:focus {
-         @include buttonInteractive($transPink);
-      }
-   }
-
-   .projectThree.description,
-   .projectThree.imageContainer {
-      border-top: 3px solid $genderQueerPurple;
-      grid-row: 4;
-
-
-      h3 {
-         color: $genderQueerPurple;
-      }
-
-      .button:hover,
-      .button:focus {
-         @include buttonInteractive($genderQueerPurple);
-      }
-   }
-
-   .projectFour.description, 
-   .projectFour.imageContainer {
-      border-top: 3px solid $agenderGreen;
-      grid-row: 5;
-
-      h3 {
-         color: $agenderGreen;
-      }
-
-      .button:hover, 
-      .button:focus {
-         @include buttonInteractive($agenderGreen);
+         align-self: flex-start;
       }
    }
 }
+
+@mixin projectColors($color) {
+   border-top: 3px solid $color;
+
+   h3 {
+      color: $color;
+   }
+
+   .button:hover,
+   .button:focus {
+      @include buttonInteractive($color);
+   }
+}
+.projectOne.description {
+   @include projectColors($transBlue);
+}
+.projectTwo.description {
+   @include projectColors($transPink);
+}
+.projectThree.description {
+   @include projectColors($genderQueerPurple);
+}
+.projectFour.description {
+   @include projectColors($agenderGreen);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .projects {
+//    margin-top: 150px;
+//    display: grid;
+//    grid-template-rows: repeat(auto-fit, minmax(fit-content, 1fr));
+//    grid-template-columns: repeat(12, minmax(65px, 1fr));
+//    justify-content: center;
+//    grid-auto-flow: columns;
+//    grid-auto-columns: minmax(65px, 1fr);
+//    grid-gap: 30px;
+
+//    .heading {
+//       grid-column: 1 / -1;
+
+//       h2, 
+//       h2 + h3 {
+//          text-align: center;
+//          margin: 0px auto;
+//       }
+   
+//       h2 + h3 {
+//          color: $agenderGreen;
+//          margin-bottom: 200px;
+//       }
+//    }
+
+//    .description {
+//       background: $background;
+//       grid-column-start: 2;
+//       grid-column-end: span 6;
+//       // grid-row: 1;
+//       align-self: center;
+//       padding: 30px 0px 30px 0;
+//       z-index: 10;
+//       display: flex;
+//       flex-direction: column;
+
+//       h4 {
+//          order: -1;
+//       }
+//       p {
+//          margin: 20px 60px 20px 0;
+//       }
+//       .button {
+//          max-width: 200px;
+//          text-align: center;
+//       }
+//    }
+   
+//    .imageContainer {
+//       grid-column-start: 7;
+//       grid-column-end: span 7;
+//       // grid-row: 1;
+//       // min-width: 600px;
+      
+//       img {
+//          // text-align: right;
+//          width: 100%;
+//          // width: 600px;
+//       }
+//    }
+
+//    .projectOne.description,
+//    .projectOne.imageContainer {
+//          border-top: 3px solid $transBlue;
+//          grid-row: 2;
+
+//       h3 {
+//          color: $transBlue
+//       }
+
+//       .button:hover,
+//       .button:focus {
+//          @include buttonInteractive($transBlue); 
+//       }
+//    }
+
+//    .projectTwo.description,
+//    .projectTwo.imageContainer {
+//          border-top: 3px solid $transPink;
+//          grid-row: 3;
+
+//       h3 {
+//          color: $transPink;
+//       }
+
+//       .button:hover,
+//       .button:focus {
+//          @include buttonInteractive($transPink);
+//       }
+//    }
+
+//    .projectThree.description,
+//    .projectThree.imageContainer {
+//       border-top: 3px solid $genderQueerPurple;
+//       grid-row: 4;
+
+
+//       h3 {
+//          color: $genderQueerPurple;
+//       }
+
+//       .button:hover,
+//       .button:focus {
+//          @include buttonInteractive($genderQueerPurple);
+//       }
+//    }
+
+//    .projectFour.description, 
+//    .projectFour.imageContainer {
+//       border-top: 3px solid $agenderGreen;
+//       grid-row: 5;
+
+//       h3 {
+//          color: $agenderGreen;
+//       }
+
+//       .button:hover, 
+//       .button:focus {
+//          @include buttonInteractive($agenderGreen);
+//       }
+//    }
+// }

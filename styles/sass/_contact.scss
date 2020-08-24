@@ -1,15 +1,13 @@
 .contact {
    min-height: 100vh;
-   text-align: center;
-   padding-top: 50px;
+   padding: 50px 3%;
 
    h3 {
       color: $nonBinaryGold;
    }
    
    p {
-      width: 50%;
-      margin: 60px auto;
+      margin: 20px auto 24px auto;
    }
 
    .button:hover, 

@@ -1,3 +1,4 @@
+// ===================================================
 // VARIABLES - COLORS
 $background: #140E1A;
 $white: #fff;
@@ -9,7 +10,10 @@ $nonBinaryGold: #F4D06F;
 $agenderGreen: #A2FAA3;
 
 $straightBlue: #0868AC;
+// ===================================================
 
+
+// ===================================================
 // MIXINS
 @mixin fontStyle($size, $weight, $spacing, $height: normal) {
    font-family: 'Space Grotesk';
@@ -35,7 +39,10 @@ $straightBlue: #0868AC;
    transform: scaleX(1.07);
    transition: border .3s, color .3s, transform .3s;
 }
+// ===================================================
 
+
+// ===================================================
 // FONTS
 @font-face {
    font-family: 'Space Grotesk';
@@ -54,3 +61,4 @@ $straightBlue: #0868AC;
    font-style: normal;
    font-display: swap;
 }
+// ===================================================

@@ -7,7 +7,6 @@ nav {
 
       li {
          padding: 10px;
-         // font-size: 2.2rem;
       }
    }
 }
@@ -16,14 +15,15 @@ header {
    min-height: 100vh;
 
    .headerText {
-      height: 75vh;
+      min-height: 75vh;
       display: flex;
-      justify-content: center;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
 
       h1 {
          opacity: 0;
+         margin: 15px 0;
       }
 
       .developer, 
@@ -38,21 +38,17 @@ header {
       }
 
       & p:first-child {
-         align-self: flex-start;
-         margin-left: 82px;
-         margin-bottom: 25px;
+         text-align: center;
          opacity: 0;
       }
 
       & p:last-child {
-         align-self: flex-end;
-         margin-right: 78px;
+         text-align: center;
       }
    }
 
    .skipToContent {
-      width: 5%;
-      color: $genderQueerPurple;
+      width: 65px;
       margin: 0 auto;
       
       .fa-scroll {

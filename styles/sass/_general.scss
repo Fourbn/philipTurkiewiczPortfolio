@@ -1,3 +1,4 @@
+// ===================================================
 // STRIPPING OF DEFAULT STYLES
 html {
    font-size: 125%;
@@ -13,7 +14,6 @@ li,
 a {
    padding: 0;
    margin: 0;
-   // height: 100%;
 }
 
 li {
@@ -31,7 +31,10 @@ img {
    max-width: 100%;
    height: auto;
 }
+// ===================================================
 
+
+// ===================================================
 // GLOBAL STYLING FOR SITE
 body {
    background-color: $background;
@@ -39,7 +42,7 @@ body {
 }
 
 .wrapper {
-   width: 90%;
+   width: 95%;
    max-width: 1200px;
    margin: 0 auto;
 }
@@ -47,32 +50,31 @@ body {
 .button {
    @include button();
 }
+// ===================================================
 
 
+// ===================================================
 // TYPOGRAPHY
 h1 {
-   @include fontStyle(9.6rem, 700, 0);
+   @include fontStyle(2.6rem, 700, 0);
    color: $transBlue;
    }
 
 h2, h4, .subheading {
-   @include fontStyle(1.2rem, 700, 3px, 2);
+   @include fontStyle(.8rem, 700, 3px, 2);
    text-transform: uppercase;
 }
 
 h3 {
-   @include fontStyle(3.6rem, 700, 2px);
-}
-
-h4 {
-   @include fontStyle(1rem, 700, 4px, 2);
+   @include fontStyle(2.2rem, 700, 2px);
 }
 
 p {
-   @include fontStyle(.8rem, 400, 0, 1.5);
+   @include fontStyle(.6rem, 400, 0, 1.5);
 }
 
 .turkeyLogo, 
 .getInTouch {
-   width: 8%;
+   width: 75px;
 }
+// ===================================================

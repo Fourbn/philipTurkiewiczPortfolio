@@ -1,0 +1,42 @@
+// ===================================================
+// mobile: 375px 
+// font size change to better reflect design
+@media (min-width: 375px) {
+   h1 {
+      font-size: 3.2rem;
+   }
+   h2, h4, .subheading {
+      font-size: 1rem;
+   }
+
+   h3 {
+      font-size: 2.4rem;
+   }
+
+   p {
+      font-size: .8rem;
+   }
+}
+
+// ===================================================
+// tablet: 768px
+@media (min-width: 768px) {
+   // FONT
+   h1 {
+      font-size: 6.8rem;
+   }
+
+   // HEADER
+   .headerText p:first-child {
+      text-align: left;
+      align-self: flex-start;
+      padding-left: 12px;
+   }
+
+   .headerText p:last-child {
+      text-align: right;
+      align-self: flex-end;
+      padding-right: 10px;
+   }
+
+}
