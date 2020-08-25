@@ -11,8 +11,14 @@
    <header class="wrapper">
       <nav>
          <ul>
-            <li class="turkeyLogo"><img src="./assets/icons/code-turkey.svg" alt=""></li>
-            <li class="getInTouch"><a href="#contact"><img src="./assets/icons/get-in-touch.svg" alt=""></a></li>
+            <li class="turkeyLogo">
+               <img src="./assets/icons/code-turkey.svg" alt="Turkey logo made of brackets and underscores.">
+            </li>
+            <li class="getInTouch">
+               <a href="#contact" aria-label="Click here to scroll directly to the Contact Me section">
+                  <img src="./assets/icons/get-in-touch.svg" alt="Circle of text saying Get In Touch">
+               </a>
+            </li>
          </ul>
       </nav>
       <div class="headerText">
@@ -21,7 +27,7 @@
          <p class="subheading"><span class="developer">Developer.</span> <span class="debutante">Debutante.</span> <span class="doofus">Doofus.</span></p>
       </div>
       <div class="skipToContent">
-         <img src="./assets/icons/scroll-icon.svg" alt="">
+         <img src="./assets/icons/scroll-icon.svg" alt="Purple scroll with arrow below it pointing down to indicate there is more content on the website.">
       </div>
    </header>
    <main>
@@ -48,7 +54,7 @@
                <p>CSS 3</p>
             </div>
             <div class="skill javascript">
-               <img src="./assets/icons/icons8-javascript.svg" alt="JavaScript Logo">
+               <img src="./assets/icons/icons8-javascript.svg" alt="Java Script Logo">
                <p>JavaScript</p>
             </div>
             <div class="skill jquery">
@@ -115,29 +121,45 @@
       </section>
       <section class="contact" id="contact">
          <h2>Contact</h2>
-         <h3>You Feeling</br> What I'm Putting Down?</h3>
+         <h3>You Picking Up</br> What I'm Putting Down?</h3>
          <p>If you like what you see, (and how could you not?) why not shoot me an email? I would love to talk more about your team dynamic and the products you create. Best case scenario, we become best friends. Worst case scenario I make you laugh and we drift apart.</p>
-         <a href="#" class="button">Shoot me an email</a>
+         <button class="button" id="showForm">Shoot me an email</button>
+
+         <div class="contactPopup toggleHidden">
+            <form action="https://formspree.io/xwkrjjnn" method="POST">
+               <h4>Contact</h4>
+               <i class="fas fa-times"></i>
+
+               <label for="name" class="srOnly">Name:</label>
+               <input type="text" name="name" class="name" id="name" placeholder="Name" required>
+
+               <label for="email" class="srOnly">Email:</label>
+               <input type="email" name="email" class="email" id="email" placeholder="Email" required>
+
+               <label for="subject" class="srOnly">Subject:</label>
+               <input type="text" name="subject" class="subject" id="subject" placeholder="Subject" required>
+
+               <label for="message" class="srOnly">Your message:</label>
+               <textarea name="message" class="message" id="message" placeholder="What can I do for you?" required></textarea>
+
+               <button type="submit" class="button">Finished</button>
+            </form>
+         </div>
       </section>
    </main>
    <footer class="wrapper">
       <div class="turkeyLogo">
-         <img src="./assets/icons/code-turkey.svg" alt="">
-         <div class="speechBubble">
-            <!-- fun speech bubble stuff in here at some point -->
-         </div>
+         <img src="./assets/icons/code-turkey.svg" alt="Turkey logo made of brackets and underscores.">
       </div>
       <div class="credits">
          <p>Made with <span><i class="fas fa-heart"></i></span> by Philip Turkiewicz</p>
-         <p>Designed with <span><i class="fas fa-paint-brush"></i></span> by <a href="#">Aaron Vince</a></p>
+         <p>Designed with <span><i class="fas fa-paint-brush"></i></span> by <a href="https://aaronvince.com/">Aaron Vince</a></p>
       </div>
       <nav class="footer">
          <ul>
-            <li><a href="#" class="github"><i class="fab fa-github"></i></a></li>
-            <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-            <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#" class="instagram"><img src="./assets/icons/instagram.svg" alt=""></a></li>
-            <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://github.com/Fourbn" class="github"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/philip-turkiewicz-12035884/" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/fourbn_task" class="twitter"><i class="fab fa-twitter"></i></a></li>
          </ul>
       </nav>
    </footer>
@@ -146,8 +168,3 @@
    <script src="script.js"></script>
 </body>
 </html>
-
-<!-- class name for grid layout -->
-<!-- color overlay on the svg image -->
-<!-- div on top of the image and then toggle color/without it -->
-<!--  -->

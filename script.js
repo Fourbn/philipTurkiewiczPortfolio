@@ -1,5 +1,24 @@
 const site = {}
 
+site.showForm = () => {
+   $('#showForm').on('click', function(e) {
+      e.preventDefault();
+
+      $('.contactPopup').removeClass('toggleHidden')
+      $('.contactPopup').addClass('showPopup')
+   })
+}
+
+site.closeForm = () => {
+   $('.fa-times').on('click', function() {
+      $('.contactPopup').removeClass('showPopup');
+      
+      setTimeout(function() {
+         $('.contactPopup').addClass('toggleHidden')
+      }, 750);
+   })
+}
+
 site.headerAnimation = () => {
    $('.headerText p:first-child').fadeTo(3000, 1);
    $('h1').delay(2200).fadeTo(3000, 1);
@@ -16,6 +35,8 @@ site.headerAnimation = () => {
 
 site.init = () => {
    site.headerAnimation();
+   site.showForm();
+   site.closeForm();
 }
 
 

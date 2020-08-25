@@ -91,20 +91,10 @@
          width: 50%;
       }
    }
-
-   // FOOTER
-   // this will be a thing eventually
-   .speechBubble {
-      width: 150px;
-      height: 80px;
-      position: absolute;
-      top: -42px;
-      left: 92px;
-   }
 }
 
 // ===================================================
-// DESKTOP: 768px
+// DESKTOP: 1200px
 @media (min-width: 1200px) {
    // FONTS
    h1 {

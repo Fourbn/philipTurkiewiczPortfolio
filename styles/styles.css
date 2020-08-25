@@ -727,6 +727,110 @@ header .skipToContent .fa-scroll {
   transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
 }
 
+.contact button {
+  background: #140E1A;
+  border-radius: 2.5px;
+  cursor: pointer;
+  margin-top: 7px;
+}
+
+.contactPopup {
+  display: block;
+  position: fixed;
+  background: #140E1A;
+  top: 10%;
+  right: 10%;
+  left: 10%;
+  bottom: 10%;
+  padding: 20px;
+  z-index: 10;
+  -webkit-box-shadow: 12px 12px #B57EDC, -12px -12px #F5A9B8;
+          box-shadow: 12px 12px #B57EDC, -12px -12px #F5A9B8;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.contactPopup form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.contactPopup form h4 {
+  width: 100%;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.contactPopup form .fa-times {
+  font-size: 1.5rem;
+  padding: 10px;
+  position: absolute;
+  right: -5px;
+  top: -12px;
+  cursor: pointer;
+}
+
+.contactPopup form .fa-times:hover {
+  color: #F5A9B8;
+}
+
+.contactPopup form input,
+.contactPopup form textarea {
+  background: rgba(244, 208, 111, 0.5);
+  color: #140E1A;
+  font-size: .8rem;
+  border: 3px solid #140E1A;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 5px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.contactPopup form input:hover, .contactPopup form input:focus,
+.contactPopup form textarea:hover,
+.contactPopup form textarea:focus {
+  background: #F4D06F;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.contactPopup form textarea {
+  resize: none;
+  height: 150px;
+}
+
+.contactPopup form .name,
+.contactPopup form .email {
+  width: 100%;
+}
+
+.contactPopup form .subject {
+  width: 100%;
+}
+
+.contactPopup form .message {
+  width: 105%;
+}
+
+.showPopup {
+  opacity: 1;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.toggleHidden {
+  visibility: hidden;
+}
+
 footer {
   border-top: 1px solid #fff;
   padding: 40px 0;
@@ -741,10 +845,6 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-footer .turkeyLogo {
-  position: relative;
 }
 
 footer nav {
@@ -797,15 +897,7 @@ footer nav li:nth-child(2) a:hover, footer nav li:nth-child(2):focus-within {
 }
 
 footer nav li:nth-child(3) a:hover, footer nav li:nth-child(3):focus-within {
-  color: #A2FAA3;
-}
-
-footer nav li:nth-child(4) a:hover, footer nav li:nth-child(4):focus-within {
   color: #5BCEFA;
-}
-
-footer nav li:last-child a:hover, footer nav li:last-child:focus-within {
-  color: #B57EDC;
 }
 
 .credits {
@@ -915,13 +1007,6 @@ footer nav li:last-child a:hover, footer nav li:last-child:focus-within {
   }
   .contact p {
     width: 50%;
-  }
-  .speechBubble {
-    width: 150px;
-    height: 80px;
-    position: absolute;
-    top: -42px;
-    left: 92px;
   }
 }
 

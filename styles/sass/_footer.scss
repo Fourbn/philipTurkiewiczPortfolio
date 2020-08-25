@@ -6,10 +6,6 @@ footer {
    justify-content: center;
    align-items: center;
 
-   .turkeyLogo {
-      position: relative;
-   }
-
 
    nav {
       margin: 0;
@@ -52,18 +48,7 @@ footer {
 
          &:nth-child(3) a:hover,
          &:nth-child(3):focus-within {
-            color: $agenderGreen;
-         }
-
-         // currently not working :'(
-         &:nth-child(4) a:hover,
-         &:nth-child(4):focus-within {
             color: $transBlue;
-         }
-
-         &:last-child a:hover,
-         &:last-child:focus-within {
-            color: $genderQueerPurple;
          }
       }
       
