@@ -628,6 +628,7 @@ header .skipToContent .fa-scroll {
   min-width: 157px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin-right: 20px;
 }
 
 .projectOne.description {
@@ -708,6 +709,21 @@ header .skipToContent .fa-scroll {
   transition: border .3s, color .3s, -webkit-transform .3s;
   transition: border .3s, color .3s, transform .3s;
   transition: border .3s, color .3s, transform .3s, -webkit-transform .3s;
+}
+
+.projectFour.description .winnie {
+  color: #A2FAA3;
+  border-radius: 10px;
+  -webkit-transition: background-color .3s, color .3s, padding .3s;
+  transition: background-color .3s, color .3s, padding .3s;
+}
+
+.projectFour.description .winnie:hover, .projectFour.description .winnie:focus {
+  color: #140E1A;
+  background-color: #A2FAA3;
+  padding: 0 7px;
+  -webkit-transition: background-color .3s, color .3s, padding .3s;
+  transition: background-color .3s, color .3s, padding .3s;
 }
 
 .contact {
@@ -893,6 +909,72 @@ header .skipToContent .fa-scroll {
 
 .contactPopup form .message {
   width: 105%;
+}
+
+.contactPopup .displayed {
+  height: 90%;
+}
+
+.contactPopup .calendlyDisplay {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactPopup .calendlyDisplay .largeButton {
+  margin: 0 25px;
+  width: 335px;
+  background-color: #F4D06F;
+  color: #140E1A;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  font-size: .7rem;
+  text-align: center;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.contactPopup .calendlyDisplay .largeButton:hover p:first-child,
+.contactPopup .calendlyDisplay .largeButton:focus p:first-child {
+  text-decoration: underline;
+}
+
+.contactPopup .calendlyDisplay .largeButton:hover, .contactPopup .calendlyDisplay .largeButton:focus {
+  background-color: #F5A9B8;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.contactPopup .calendlyDisplay .largeButton p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contactPopup .calendlyDisplay .largeButton p:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .showPopup {
@@ -1092,7 +1174,7 @@ footer nav li:nth-child(3) a:hover, footer nav li:nth-child(3):focus-within {
     font-size: 1.2rem;
   }
   h3 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
   .turkeyLogo,
   .getInTouch {
@@ -1117,28 +1199,34 @@ footer nav li:nth-child(3) a:hover, footer nav li:nth-child(3):focus-within {
         align-self: center;
     position: static;
   }
+  .projects .imageContainer {
+    margin: 20vh 0;
+  }
   .projects .projectOne.description,
   .projects .projectThree.description {
     -ms-grid-column: 2;
     -ms-grid-column-span: 6;
     grid-column: 2 / span 6;
-    padding: 20px 15% 20px 0;
+    padding: 20px 15% 30px 0;
   }
   .projects .projectOne.imageContainer,
   .projects .projectThree.imageContainer {
-    margin: 20vh 0;
     grid-column: 7 / -1;
   }
   .projects .projectTwo.description,
   .projects .projectFour.description {
     -ms-grid-column: 6;
-    -ms-grid-column-span: 6;
-    grid-column: 6 / span 6;
-    padding: 20px 0 20px 15%;
+    -ms-grid-column-span: 7;
+    grid-column: 6 / span 7;
+    padding: 20px 0 30px 10%;
+    margin-right: 10%;
+  }
+  .projects .projectTwo.description h3,
+  .projects .projectFour.description h3 {
+    font-size: 2.7rem;
   }
   .projects .projectTwo.imageContainer,
   .projects .projectFour.imageContainer {
-    margin: 20vh 0;
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
     grid-column: 1 / span 6;

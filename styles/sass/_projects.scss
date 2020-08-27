@@ -40,6 +40,7 @@
       .button {
          min-width: 157px;
          align-self: flex-start;
+         margin-right: 20px;
       }
    }
 }
@@ -67,6 +68,20 @@
 }
 .projectFour.description {
    @include projectColors($agenderGreen);
+
+   .winnie {
+      color: $agenderGreen;
+      border-radius: 10px;
+      transition: background-color .3s, color .3s, padding .3s;
+
+      &:hover, 
+      &:focus {
+         color: $background;
+         background-color: $agenderGreen;
+         padding: 0 7px;
+         transition: background-color .3s, color .3s, padding .3s;
+      }
+   }
 }
 
 

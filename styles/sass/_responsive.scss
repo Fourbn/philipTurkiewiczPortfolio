@@ -105,7 +105,7 @@
    }
 
    h3 {
-      font-size: 3.6rem;
+      font-size: 3.2rem;
    }
 
    .turkeyLogo, 
@@ -129,28 +129,35 @@
          align-self: center;
          position: static;
       }
+
+      .imageContainer {
+         margin: 20vh 0;
+      }
       
       .projectOne.description, 
       .projectThree.description {
          grid-column: 2 / span 6;
-         padding: 20px 15% 20px 0;
+         padding: 20px 15% 30px 0;
       }
 
       .projectOne.imageContainer, 
       .projectThree.imageContainer {
-         margin: 20vh 0;
          grid-column: 7 / -1;
       }
 
       .projectTwo.description, 
       .projectFour.description {
-         grid-column: 6 / span 6;
-         padding: 20px 0 20px 15%;
+         grid-column: 6 / span 7;
+         padding: 20px 0 30px 10%;
+         margin-right: 10%;
+
+         h3 {
+            font-size: 2.7rem;
+         }
       }
 
       .projectTwo.imageContainer, 
       .projectFour.imageContainer {
-         margin: 20vh 0;
          grid-column: 1 / span 6;
       }
 

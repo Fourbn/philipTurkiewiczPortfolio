@@ -21,7 +21,6 @@ site.closeForm = () => {
 
 site.changeTabs = () => {
    $('#contact').on('click', '.tab', function() {
-      console.log('click', $(this), $(this).prev("input[type='radio']").val())
       if ($(this).prev("input[type='radio']").val() === 'contactTab') {
          $('.displayed').html(`
             <form action="https://formspree.io/xwkrjjnn" method="POST">
@@ -42,7 +41,18 @@ site.changeTabs = () => {
                </form>
          `)
       } else {
-         $('.displayed').html('Calendly Tab')
+         $('.displayed').html(`
+            <div class="calendlyDisplay">
+               <a href="https://calendly.com/philip-turkiewicz/30min" target="_blank" rel="noopener" class="largeButton">
+                  <p>Calendly</p>
+                  <p>Book Appointment!</p>
+               </a>
+               <a href="mailto:philip.turkiewicz@live.ca" class="largeButton">
+                  <p>phil .turkiewicz</p>
+                  <p>Send an Email</p>
+               </a>
+            </div>
+         `)
       }
    })
 }
@@ -65,6 +75,7 @@ site.init = () => {
    site.headerAnimation();
    site.showForm();
    site.closeForm();
+   $('#contactTab').prop('checked', true);
    site.changeTabs();
 }
 
