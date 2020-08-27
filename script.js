@@ -58,17 +58,17 @@ site.changeTabs = () => {
 }
 
 site.headerAnimation = () => {
-   $('.headerText p:first-child').fadeTo(3000, 1);
-   $('h1').delay(2200).fadeTo(3000, 1);
+   $('.headerText p:first-child').fadeTo(1300, 1);
+   $('h1').delay(1300).fadeTo(1300, 1);
    setTimeout(function() {
       $('.developer').addClass('transition');
       setTimeout(function() {
          $('.debutante').addClass('transition')
          setTimeout(function(){
             $('.doofus').addClass('transition')
-         }, 1200)
-      }, 1200)
-   }, 4800);
+         }, 800)
+      }, 800)
+   }, 2800);
 }
 
 site.init = () => {
