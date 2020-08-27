@@ -1,6 +1,6 @@
 .contact {
-   min-height: 100vh;
-   padding: 50px 3%;
+   min-height: 90vh;
+   padding: 50px 3% 40px 3%;
 
    h3 {
       color: $nonBinaryGold;
@@ -35,18 +35,46 @@
    z-index: 10;
    box-shadow: 12px 12px $genderQueerPurple, -12px -12px $transPink;
    opacity: 0;
+   overflow: scroll;
    transition: opacity .5s;
 
-   form {
+   .contactTabs {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+      padding-right: 40px;
       position: relative;
 
-      h4 {
+      fieldset {
+         border: none;
          width: 100%;
-         text-align: left;
-         padding-left: 8px;
+         display: flex;
+         flex-wrap: wrap;
+         padding: 0;
+         margin: 0;
+         position: relative;
+
+         label {
+            margin: 0 8px 0 8px;
+            cursor: pointer;
+            transition: color .3s;
+            border-bottom: 2px solid $background;
+            transition: border-bottom .6s, color .6s;
+
+            &:hover, 
+            &:focus {
+               color: $transPink;
+               transition: color .3s;
+            }
+         }
+
+         .tab1:checked + label,
+         .tab2:checked + label {
+            border-bottom: 2px solid $transBlue;
+            color: $transPink;
+            transition: border-bottom .5s, color .5s;
+         }
       }
 
       .fa-times {
@@ -54,13 +82,20 @@
          padding: 10px;
          position: absolute;
          right: -5px;
-         top: -12px;
+         top: -15px;
          cursor: pointer;
 
          &:hover {
             color: $transPink;
          }
       }
+   }
+
+      form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
 
       input, 
       textarea {
@@ -69,7 +104,6 @@
          font-size: .8rem;
          border: 3px solid $background;
          border-radius: 5px;
-         // border-bottom: 3px solid $nonBinaryGold;
          padding: 5px;
          margin: 10px 5px;
          transition: background .3s;
@@ -79,11 +113,15 @@
             background: $nonBinaryGold;
             transition: background .3s;
          }
+
+         &::placeholder {
+            color: $background;
+         }
       }
 
       textarea {
          resize: none;
-         height: 150px;
+         height: 148px;
       }
 
       .name, 
@@ -102,7 +140,6 @@
 }
 
 .showPopup {
-   // z-index: 10;
    opacity: 1;
    transition: opacity .5s;
 }

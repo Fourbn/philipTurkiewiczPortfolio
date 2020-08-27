@@ -294,6 +294,7 @@ body {
   line-height: normal;
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
   padding: 13px 25px;
   border: 2px solid #fff;
   border-radius: 1px;
@@ -312,7 +313,7 @@ h1 {
   color: #5BCEFA;
 }
 
-h2, h4, .subheading {
+h2, h4, .subheading, .tab {
   font-family: 'Space Grotesk';
   font-size: 0.8rem;
   font-weight: 700;
@@ -352,6 +353,12 @@ nav ul {
 
 nav ul li {
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .getInTouch {
@@ -379,7 +386,7 @@ nav .getInTouch a:hover, nav .getInTouch afocus {
 }
 
 .turkeyLogo img {
-  width: 90px;
+  width: 75px;
 }
 
 header {
@@ -405,7 +412,7 @@ header .headerText {
 
 header .headerText h1 {
   opacity: 0;
-  margin: 15px 0;
+  margin: 30px 0;
 }
 
 header .headerText .developer,
@@ -618,22 +625,23 @@ header .skipToContent .fa-scroll {
 }
 
 .projects .description .button {
+  min-width: 157px;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
 .projectOne.description {
-  border-top: 3px solid #5BCEFA;
+  border-top: 3px solid #B57EDC;
 }
 
 .projectOne.description h3 {
-  color: #5BCEFA;
+  color: #B57EDC;
 }
 
 .projectOne.description .button:hover,
 .projectOne.description .button:focus {
-  color: #5BCEFA;
-  border: 2px solid #5BCEFA;
+  color: #B57EDC;
+  border: 2px solid #B57EDC;
   -webkit-transform: scaleX(1.07);
           transform: scaleX(1.07);
   -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
@@ -663,17 +671,17 @@ header .skipToContent .fa-scroll {
 }
 
 .projectThree.description {
-  border-top: 3px solid #B57EDC;
+  border-top: 3px solid #5BCEFA;
 }
 
 .projectThree.description h3 {
-  color: #B57EDC;
+  color: #5BCEFA;
 }
 
 .projectThree.description .button:hover,
 .projectThree.description .button:focus {
-  color: #B57EDC;
-  border: 2px solid #B57EDC;
+  color: #5BCEFA;
+  border: 2px solid #5BCEFA;
   -webkit-transform: scaleX(1.07);
           transform: scaleX(1.07);
   -webkit-transition: border .3s, color .3s, -webkit-transform .3s;
@@ -703,8 +711,8 @@ header .skipToContent .fa-scroll {
 }
 
 .contact {
-  min-height: 100vh;
-  padding: 50px 3%;
+  min-height: 90vh;
+  padding: 50px 3% 40px 3%;
 }
 
 .contact h3 {
@@ -747,8 +755,73 @@ header .skipToContent .fa-scroll {
   -webkit-box-shadow: 12px 12px #B57EDC, -12px -12px #F5A9B8;
           box-shadow: 12px 12px #B57EDC, -12px -12px #F5A9B8;
   opacity: 0;
+  overflow: scroll;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
+}
+
+.contactPopup .contactTabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  padding-right: 40px;
+  position: relative;
+}
+
+.contactPopup .contactTabs fieldset {
+  border: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.contactPopup .contactTabs fieldset label {
+  margin: 0 8px 0 8px;
+  cursor: pointer;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  border-bottom: 2px solid #140E1A;
+  -webkit-transition: border-bottom .6s, color .6s;
+  transition: border-bottom .6s, color .6s;
+}
+
+.contactPopup .contactTabs fieldset label:hover, .contactPopup .contactTabs fieldset label:focus {
+  color: #F5A9B8;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+.contactPopup .contactTabs fieldset .tab1:checked + label,
+.contactPopup .contactTabs fieldset .tab2:checked + label {
+  border-bottom: 2px solid #5BCEFA;
+  color: #F5A9B8;
+  -webkit-transition: border-bottom .5s, color .5s;
+  transition: border-bottom .5s, color .5s;
+}
+
+.contactPopup .contactTabs .fa-times {
+  font-size: 1.5rem;
+  padding: 10px;
+  position: absolute;
+  right: -5px;
+  top: -15px;
+  cursor: pointer;
+}
+
+.contactPopup .contactTabs .fa-times:hover {
+  color: #F5A9B8;
 }
 
 .contactPopup form {
@@ -761,25 +834,6 @@ header .skipToContent .fa-scroll {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-}
-
-.contactPopup form h4 {
-  width: 100%;
-  text-align: left;
-  padding-left: 8px;
-}
-
-.contactPopup form .fa-times {
-  font-size: 1.5rem;
-  padding: 10px;
-  position: absolute;
-  right: -5px;
-  top: -12px;
-  cursor: pointer;
-}
-
-.contactPopup form .fa-times:hover {
-  color: #F5A9B8;
 }
 
 .contactPopup form input,
@@ -803,9 +857,29 @@ header .skipToContent .fa-scroll {
   transition: background .3s;
 }
 
+.contactPopup form input::-webkit-input-placeholder,
+.contactPopup form textarea::-webkit-input-placeholder {
+  color: #140E1A;
+}
+
+.contactPopup form input:-ms-input-placeholder,
+.contactPopup form textarea:-ms-input-placeholder {
+  color: #140E1A;
+}
+
+.contactPopup form input::-ms-input-placeholder,
+.contactPopup form textarea::-ms-input-placeholder {
+  color: #140E1A;
+}
+
+.contactPopup form input::placeholder,
+.contactPopup form textarea::placeholder {
+  color: #140E1A;
+}
+
 .contactPopup form textarea {
   resize: none;
-  height: 150px;
+  height: 148px;
 }
 
 .contactPopup form .name,
@@ -1031,6 +1105,10 @@ footer nav li:nth-child(3) a:hover, footer nav li:nth-child(3):focus-within {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .projects h2 + h3 {
+    max-width: 50%;
+    margin: 0 auto;
   }
   .projects .description {
     margin-bottom: 0;

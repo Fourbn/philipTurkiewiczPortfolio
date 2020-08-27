@@ -38,6 +38,7 @@
       }
 
       .button {
+         min-width: 157px;
          align-self: flex-start;
       }
    }
@@ -56,13 +57,13 @@
    }
 }
 .projectOne.description {
-   @include projectColors($transBlue);
+   @include projectColors($genderQueerPurple);
 }
 .projectTwo.description {
    @include projectColors($transPink);
 }
 .projectThree.description {
-   @include projectColors($genderQueerPurple);
+   @include projectColors($transBlue);
 }
 .projectFour.description {
    @include projectColors($agenderGreen);

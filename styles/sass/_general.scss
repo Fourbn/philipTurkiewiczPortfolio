@@ -61,7 +61,7 @@ h1 {
    color: $transBlue;
    }
 
-h2, h4, .subheading {
+h2, h4, .subheading, .tab {
    @include fontStyle(.8rem, 700, 3px, 2);
    text-transform: uppercase;
 }
