@@ -35,7 +35,7 @@
    z-index: 10;
    box-shadow: 12px 12px $genderQueerPurple, -12px -12px $transPink;
    opacity: 0;
-   overflow: scroll;
+   overflow-y: scroll;
    transition: opacity .5s;
 
    .contactTabs {
@@ -56,9 +56,10 @@
          position: relative;
 
          label {
+            text-align: left;
             margin: 0 8px 0 8px;
             cursor: pointer;
-            transition: color .3s;
+            max-width: 90px;
             border-bottom: 2px solid $background;
             transition: border-bottom .6s, color .6s;
 
