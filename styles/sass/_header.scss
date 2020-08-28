@@ -45,13 +45,14 @@ header {
       align-items: center;
 
       h1 {
-         opacity: 0;
+         color: $background;
          margin: 25px 0 20px 0;
       }
 
       .developer, 
       .debutante, 
-      .doofus {
+      .doofus,
+      .subheading {
          color: $background;
       }
 
@@ -60,9 +61,13 @@ header {
          transition: color 3s;
       }
 
+      .transitionBlue {
+         color: $transBlue;
+         transition: color 3s;
+      }
+
       & p:first-child {
          text-align: center;
-         opacity: 0;
       }
 
       & p:last-child {

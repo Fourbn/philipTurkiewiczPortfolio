@@ -48,7 +48,7 @@ site.changeTabs = () => {
                   <p>Book Appointment!</p>
                </a>
                <a href="mailto:philip.turkiewicz@live.ca" class="largeButton">
-                  <p>phil .turkiewicz</p>
+                  <p>phil . turkiewicz</p>
                   <p>Send an Email</p>
                </a>
             </div>
@@ -58,16 +58,18 @@ site.changeTabs = () => {
 }
 
 site.headerAnimation = () => {
-   $('.headerText p:first-child').fadeTo(1300, 1);
-   $('h1').delay(1300).fadeTo(1300, 1);
+   $('.headerText p:first-child').addClass('transition');
+   setTimeout(function() {
+      $('h1').addClass('transitionBlue');
+   }, 1300)
    setTimeout(function() {
       $('.developer').addClass('transition');
       setTimeout(function() {
          $('.debutante').addClass('transition')
          setTimeout(function(){
             $('.doofus').addClass('transition')
-         }, 800)
-      }, 800)
+         }, 1000)
+      }, 1000)
    }, 2800);
 }
 

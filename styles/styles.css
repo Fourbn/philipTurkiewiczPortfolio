@@ -411,13 +411,14 @@ header .headerText {
 }
 
 header .headerText h1 {
-  opacity: 0;
+  color: #140E1A;
   margin: 25px 0 20px 0;
 }
 
 header .headerText .developer,
 header .headerText .debutante,
-header .headerText .doofus {
+header .headerText .doofus,
+header .headerText .subheading {
   color: #140E1A;
 }
 
@@ -427,9 +428,14 @@ header .headerText .transition {
   transition: color 3s;
 }
 
+header .headerText .transitionBlue {
+  color: #5BCEFA;
+  -webkit-transition: color 3s;
+  transition: color 3s;
+}
+
 header .headerText p:first-child {
   text-align: center;
-  opacity: 0;
 }
 
 header .headerText p:last-child {
@@ -625,7 +631,6 @@ header .skipToContent .fa-scroll {
 }
 
 .projects .description .button {
-  min-width: 157px;
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-right: 20px;
@@ -1018,7 +1023,7 @@ footer nav ul {
 }
 
 footer nav li {
-  font-size: .7rem;
+  font-size: 1rem;
   margin: 0 5px;
   padding: 0;
 }
