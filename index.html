@@ -147,17 +147,17 @@
 
          <div class="contactPopup toggleHidden">
             <div class="contactTabs">
-               <button class="tab tab1" id="contactTab">Contact</button>
-               <button class="tab tab2" id="calendlyTab">Calendly</button>
+               <button class="tab tab1" id="contactTab" aria-label="Click this button to access Philip's contact form">Contact</button>
+               <button class="tab tab2" id="calendlyTab" aria-label="Click this button to access Philip's Calendly and Email links">Calendly</button>
 
-               <button class="exit">
+               <button class="exit" aria-label="Click this x button to close the contact pop up window.">
                   <i class="fas fa-times"></i>
                </button>
             </div>
             <div class="displayed">
                <form action="https://formspree.io/xwkrjjnn" method="POST">
    
-                  <label for="name" class="srOnly">Name:</label>
+                  <label for="name" class="srOnly">Full Name:</label>
                   <input type="text" name="name" class="name" id="name" placeholder="Name" required>
    
                   <label for="email" class="srOnly">Email:</label>
@@ -169,7 +169,7 @@
                   <label for="message" class="srOnly">Your message:</label>
                   <textarea name="message" class="message" id="message" placeholder="What can I do for you?" required></textarea>
    
-                  <button type="submit" class="button">Finished</button>
+                  <button type="submit" class="button" aria-label="Submit the form">Finished</button>
                </form>
             </div>
          </div>
