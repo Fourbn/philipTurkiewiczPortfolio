@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176871267-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-176871267-1');
+   </script>
+
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CodeTurkie</title>
@@ -137,14 +147,12 @@
 
          <div class="contactPopup toggleHidden">
             <div class="contactTabs">
-               <fieldset>
-                  <input type="radio" name="tabs" id="contactTab" class="srOnly tab1" value="contactTab" checked>
-                  <label for="contactTab" class="tab">Contact</label>
+               <button class="tab tab1" id="contactTab">Contact</button>
+               <button class="tab tab2" id="calendlyTab">Calendly</button>
 
-                  <input type="radio" name="tabs" id="calendlyTab" class="srOnly tab2" value="calendlyTab">
-                  <label for="calendlyTab" class="tab">Calendly</label>
-               </fieldset>
-               <i class="fas fa-times"></i>
+               <button class="exit">
+                  <i class="fas fa-times"></i>
+               </button>
             </div>
             <div class="displayed">
                <form action="https://formspree.io/xwkrjjnn" method="POST">

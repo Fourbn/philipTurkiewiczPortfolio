@@ -795,44 +795,26 @@ header .skipToContent .fa-scroll {
   position: relative;
 }
 
-.contactPopup .contactTabs fieldset {
-  border: none;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.contactPopup .contactTabs button {
+  color: #fff;
   padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.contactPopup .contactTabs fieldset label {
-  text-align: left;
   margin: 0 8px 0 8px;
   cursor: pointer;
-  max-width: 90px;
+  border-radius: 0;
+  border: none;
   border-bottom: 2px solid #140E1A;
   -webkit-transition: border-bottom .6s, color .6s;
   transition: border-bottom .6s, color .6s;
 }
 
-.contactPopup .contactTabs fieldset label:hover, .contactPopup .contactTabs fieldset label:focus {
+.contactPopup .contactTabs button:hover, .contactPopup .contactTabs button:focus {
   color: #F5A9B8;
-  -webkit-transition: color .3s;
-  transition: color .3s;
-}
-
-.contactPopup .contactTabs fieldset .tab1:checked + label,
-.contactPopup .contactTabs fieldset .tab2:checked + label {
   border-bottom: 2px solid #5BCEFA;
-  color: #F5A9B8;
   -webkit-transition: border-bottom .5s, color .5s;
   transition: border-bottom .5s, color .5s;
 }
 
-.contactPopup .contactTabs .fa-times {
+.contactPopup .contactTabs .exit {
   font-size: 1.5rem;
   padding: 10px;
   position: absolute;
@@ -841,8 +823,14 @@ header .skipToContent .fa-scroll {
   cursor: pointer;
 }
 
-.contactPopup .contactTabs .fa-times:hover {
+.contactPopup .contactTabs .exit:hover, .contactPopup .contactTabs .exit:focus {
   color: #F5A9B8;
+  border: none;
+  outline: 1px dotted #5BCEFA;
+}
+
+.contactPopup .contactTabs .currentTab {
+  color: #F4D06F;
 }
 
 .contactPopup form {

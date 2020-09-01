@@ -45,40 +45,26 @@
       width: 100%;
       padding-right: 40px;
       position: relative;
-
-      fieldset {
-         border: none;
-         width: 100%;
-         display: flex;
-         flex-wrap: wrap;
+      
+      button {
+         color: $white;
          padding: 0;
-         margin: 0;
-         position: relative;
+         margin: 0 8px 0 8px;
+         cursor: pointer;
+         border-radius: 0;
+         border: none;
+         border-bottom: 2px solid $background;
+         transition: border-bottom .6s, color .6s;
 
-         label {
-            text-align: left;
-            margin: 0 8px 0 8px;
-            cursor: pointer;
-            max-width: 90px;
-            border-bottom: 2px solid $background;
-            transition: border-bottom .6s, color .6s;
-
-            &:hover, 
-            &:focus {
-               color: $transPink;
-               transition: color .3s;
-            }
-         }
-
-         .tab1:checked + label,
-         .tab2:checked + label {
-            border-bottom: 2px solid $transBlue;
+         &:hover, 
+         &:focus {
             color: $transPink;
+            border-bottom: 2px solid $transBlue;
             transition: border-bottom .5s, color .5s;
          }
       }
 
-      .fa-times {
+      .exit {
          font-size: 1.5rem;
          padding: 10px;
          position: absolute;
@@ -86,11 +72,19 @@
          top: -15px;
          cursor: pointer;
 
-         &:hover {
+         &:hover, 
+         &:focus {
             color: $transPink;
+            border: none;
+            outline: 1px dotted $transBlue;
          }
       }
+
+      .currentTab {
+         color: $nonBinaryGold;
+      }
    }
+
 
    form {
       display: flex;

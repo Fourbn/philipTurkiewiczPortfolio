@@ -10,7 +10,7 @@ site.showForm = () => {
 }
 
 site.closeForm = () => {
-   $('.fa-times').on('click', function() {
+   $('.exit').on('click', function() {
       $('.contactPopup').removeClass('showPopup');
       
       setTimeout(function() {
@@ -20,9 +20,13 @@ site.closeForm = () => {
 }
 
 site.changeTabs = () => {
-   $('#contact').on('click', '.tab', function() {
-      if ($(this).prev("input[type='radio']").val() === 'contactTab') {
-         $('.displayed').html(`
+   $('#contactTab').addClass('currentTab');
+
+   $('#contact').on('click', '#contactTab', function() {
+      $('#contactTab').toggleClass('currentTab');
+      $('#calendlyTab').toggleClass('currentTab');
+
+      $('.displayed').html(`
             <form action="https://formspree.io/xwkrjjnn" method="POST">
    
                   <label for="name" class="srOnly">Name:</label>
@@ -40,8 +44,13 @@ site.changeTabs = () => {
                   <button type="submit" class="button">Finished</button>
                </form>
          `)
-      } else {
-         $('.displayed').html(`
+   })
+
+   $('#contact').on('click', '#calendlyTab', function() {
+      $('#contactTab').toggleClass('currentTab');
+      $('#calendlyTab').toggleClass('currentTab');
+
+      $('.displayed').html(`
             <div class="calendlyDisplay">
                <a href="https://calendly.com/philip-turkiewicz/30min" target="_blank" rel="noopener" class="largeButton">
                   <p>Calendly</p>
@@ -53,7 +62,6 @@ site.changeTabs = () => {
                </a>
             </div>
          `)
-      }
    })
 }
 
