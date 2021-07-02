@@ -30,10 +30,12 @@
     "gatsby-plugin-styled-components": "^4.8.0",
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-transformer-sharp": "^3.8.0",
+    "netlify-cli": "^3.39.4",
     "netlify-cms-app": "^2.15.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
     "styled-components": "^5.3.0"
   }
 }
