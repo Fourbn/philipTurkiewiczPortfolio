@@ -94,7 +94,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 5.2rem;
+    font-size: 13.6rem;
   }
 
   h2,
@@ -130,6 +130,28 @@ const GlobalStyles = createGlobalStyle`
     max-width: 1200px;
     margin: 0 auto;
   }
+
+// =========================================== //
+
+// ============== ANIMATIONS ================= //
+
+  @keyframes fading-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fading-out {
+			0% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+			}
+		}
 `;
 
 export default GlobalStyles;
