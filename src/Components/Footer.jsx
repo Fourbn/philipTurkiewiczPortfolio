@@ -9,93 +9,99 @@ import {
 import styled from "styled-components";
 
 const FooterStyles = styled.footer`
-	footer {
-		border-top: 1px solid --white;
-		padding: 40px 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-	}
+	border-top: 1px solid var(--grey);
+	padding: 40px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 
-	.footer-nav {
+	.footerNav {
 		margin: 0;
 		width: 100%;
-	}
-
-	.footer-nav ul {
-		display: flex;
-		justify-content: center;
-	}
-
-	.footer-nav li {
-		font-size: 1rem;
-		margin: 0 5px;
-		padding: 0;
-	}
-
-	.social-link {
-		padding: 1rem;
-		transition: transform 0.3s, color 0.3s;
-	}
-	.social-link:hover,
-	.social-link:focus {
-		transform: scale(1.6);
-		transition: transform 0.3s, color 0.3s;
-	}
-	.github:hover,
-	.social-link.github:focus {
-		color: --transPink;
-	}
-	.linkedin:hover,
-	.social-link.linkedin:focus {
-		color: --nonBinaryGold;
-	}
-	.twitter:hover,
-	.social-link.twitter:focus {
-		color: --transBlue;
+		ul {
+			display: flex;
+			justify-content: center;
+		}
+		li {
+			font-size: 1rem;
+			margin: 0 5px;
+			padding: 0;
+		}
 	}
 
 	.credits {
 		text-align: center;
 		width: 100%;
 		padding: 35px 0;
-	}
-	.credits p svg {
-		display: inline-block;
-		position: relative;
-		top: -1px;
-		padding: 3px;
-		font-size: 0.7rem;
-	}
-	.credits p:first-of-type svg {
-		color: --transPink;
-	}
-	.credits p:last-of-type svg {
-		color: --agenderGreen;
+		p:first-of-type {
+			margin-bottom: 4px;
+		}
+		a {
+			transition: color 0.3s;
+		}
+		a:hover,
+		a:focus {
+			color: var(--agenderGreen);
+		}
+
+		.creditIcon {
+			display: inline-block;
+			position: relative;
+			top: -1px;
+			margin: 0 3px;
+			font-size: 1.4rem;
+			&.heart {
+				color: var(--transPink);
+			}
+			&.palette {
+				color: var(--agenderGreen);
+			}
+		}
 	}
 
-	.credits p a:hover,
-	.credits p a:focus {
-		color: --agenderGreen;
+	.socialLink {
+		padding: 1rem;
+		.socialIcon {
+			font-size: 2rem;
+			transition: transform 0.3s, color 0.3s;
+		}
+		&:hover .socialIcon,
+		&:focus .socialIcon {
+			transform: scale(1.6);
+			transition: transform 0.3s, color 0.3s;
+		}
+		&.github:hover,
+		&.github.focus {
+			color: var(--transPink);
+		}
+		&.linkedin:hover,
+		&.linkedin:focus {
+			color: var(--nonBinaryGold);
+		}
+		&.twitter:hover,
+		&.twitter:focus {
+			color: var(--transBlue);
+		}
 	}
 `;
 
 const Footer = () => {
 	return (
 		<FooterStyles>
-			<div class="turkeyLogo">
+			<div className="turkeyLogo">
 				<img
 					src="./assets/icons/code-turkey.svg"
 					alt="Turkey logo made of brackets and underscores."
 				/>
 			</div>
-			<div class="credits">
+			<div className="credits">
 				<p>
-					Made with <FaHeart /> by Philip Turkiewicz
+					Made with <FaHeart className="creditIcon heart" /> by Philip
+					Turkiewicz
 				</p>
 				<p>
-					Designed with <FaPalette /> by{" "}
+					Designed with <FaPalette className="creditIcon palette" /> by{" "}
 					<a
 						href="https://aaronvince.com/"
 						target="_blank"
@@ -105,36 +111,36 @@ const Footer = () => {
 					</a>
 				</p>
 			</div>
-			<nav class="footer-nav">
+			<nav className="footerNav">
 				<ul>
-					<li className="nav-item">
+					<li>
 						<a
 							href="https://github.com/Fourbn"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="social-link github"
+							className="socialLink github"
 						>
-							<FaGithub />
+							<FaGithub className="socialIcon github" />
 						</a>
 					</li>
-					<li className="nav-item">
+					<li>
 						<a
 							href="https://www.linkedin.com/in/philip-turkiewicz-12035884/"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="social-link linkedin"
+							className="socialLink linkedin"
 						>
-							<FaLinkedinIn />
+							<FaLinkedinIn className="socialIcon linkedin" />
 						</a>
 					</li>
-					<li className="nav-item">
+					<li>
 						<a
 							href="https://twitter.com/fourbn_task"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="social-link twitter"
+							class="socialLink twitter"
 						>
-							<FaTwitter />
+							<FaTwitter className="socialIcon twitter" />
 						</a>
 					</li>
 				</ul>

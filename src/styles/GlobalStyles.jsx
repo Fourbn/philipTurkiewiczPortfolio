@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --background: #140E1A;
     --white: #fff;
+    --grey: #303436;
 
     --transBlue: #5BCEFA;
     --genderQueerPurple: #B57EDC;
@@ -112,7 +113,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.5;
   }
@@ -120,8 +121,8 @@ const GlobalStyles = createGlobalStyle`
 
 // =========== GLOBAL STYLES ================= //
   body {
-    background-color: --background;
-    color: --white;
+    background-color: var(--background);
+    color: var(--white);
   }
 
   .wrapper {
