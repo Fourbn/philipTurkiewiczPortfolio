@@ -1,15 +1,120 @@
 import React from "react";
 
+import HtmlLogo from '../Components/SVG/HtmlLogo';
+import CssLogo from '../Components/SVG/CssLogo';
+import JavascriptLogo from '../Components/SVG/JavascriptLogo';
+import JqueryLogo from '../Components/SVG/JqueryLogo';
+import ReactLogo from '../Components/SVG/ReactLogo';
+import FirebaseLogo from '../Components/SVG/FirebaseLogo';
+import styled from "styled-components";
+
+const AboutStyles = styled.section`
+	.about {
+		min-height: 100vh;
+		margin: 150px 2.5%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+		align-items: flex-start;
+	}
+
+	.headshotContainer {
+		grid-column: 1 / -1;
+		margin: 0 auto;
+	}
+
+	.aboutInfo {
+		grid-column: 1 / -1;
+
+		h2 {
+			padding-left: 3px;
+			margin-bottom: -5px;
+		}
+
+		h3 {
+			color: $nonBinaryGold;
+			margin: 5px 0;
+		}
+
+		& > p {
+			margin: 20px 0;
+		}
+
+		.button {
+			// with a new button hover, should change the margin-left 5px back to 0 for better alignment
+			margin: 25px 5px 55px 5px;
+		}
+	}
+
+	.skills-box {
+		grid-column: 1 / -1;
+		width: 90%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+		grid-gap: 1fr;
+
+		h4 {
+			font-size: 1.8rem;
+			padding-left: 8px;
+			width: 100%;
+			grid-column: 1 / -1;
+		}
+
+		.skill {
+			justify-self: flex-start;
+			align-self: center;
+			height: 100%;
+			margin: 3px;
+			padding-left: 8px;
+			transition: transform 0.3s;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+
+			&:hover {
+				transform: scale(1.2);
+				transition: transform 0.3s;
+			}
+
+			svg {
+				margin: 0 auto;
+			}
+		}
+
+		p {
+			font-size: 1.2rem;
+			text-align: center;
+			margin: 7px 0;
+		}
+
+		.html svg,
+		.css svg,
+		.javascript svg {
+			width: 60px;
+		}
+
+		.jquery svg,
+		.react svg,
+		.firebase svg {
+			width: 70px;
+		}
+
+		.javascript svg,
+		.react svg {
+			padding-bottom: 3px;
+		}
+	}
+`;
+
 const About = () => {
 	return (
-		<section class="about">
-			<div class="headshotContainer">
+		<AboutStyles className="about">
+			<div className="headshotContainer">
 				<img
 					src="./assets/phil-gradient-photo.gif"
 					alt="Headshot of Philip. They have short curly brown hair, blue framed glasses, and they are wearing a black and purple plaid flannel. They look very sofisticated."
 				/>
 			</div>
-			<div class="aboutInfo">
+			<div className="aboutInfo">
 				<h2>About me</h2>
 				<h3>Hey, I'm Philip!</h3>
 				<p>
@@ -33,48 +138,39 @@ const About = () => {
 					href="./assets/philip-turkiewicz-resume.pdf"
 					target="_blank"
 					rel="noopener"
-					class="button"
+					className="button"
 				>
 					View Résumé
 				</a>
 			</div>
-			<div class="skills-box">
-				<h4>Skills</h4>
-				<div class="skill html">
-					<img
-						src="./assets/icons/HTML5_logo_and_wordmark.svg"
-						alt="HTML 5 Logo"
-					/>
+			<h4>Skills</h4>
+			<ul className="skills-box">
+				<li className="skill html">
+					<HtmlLogo />
 					<p>HTML 5</p>
-				</div>
-				<div class="skill css">
-					<img src="./assets/icons/layer1.svg" alt="CSS 3 Logo" />
+				</li>
+				<li className="skill css">
+					<CssLogo />
 					<p>CSS 3</p>
-				</div>
-				<div class="skill javascript">
-					<img
-						src="./assets/icons/icons8-javascript.svg"
-						alt="Java Script Logo"
-					/>
+				</li>
+				<li className="skill javascript">
+					<JavascriptLogo />
 					<p>JavaScript</p>
-				</div>
-				<div class="skill jquery">
-					<img src="./assets/icons/jquery.svg" alt="jQuery Logo" />
+				</li>
+				<li className="skill jquery">
+					<JqueryLogo />
 					<p>jQuery</p>
-				</div>
-				<div class="skill react">
-					<img src="./assets/icons/React-icon.svg" alt="React Logo" />
+				</li>
+				<li className="skill react">
+					<ReactLogo />
 					<p>React</p>
-				</div>
-				<div class="skill firebase">
-					<img
-						src="./assets/icons/icons8-firebase-96.svg"
-						alt="Firebase logo"
-					/>
+				</li>
+				<li className="skill firebase">
+					<FirebaseLogo />
 					<p>Firebase</p>
-				</div>
-			</div>
-		</section>
+				</li>
+			</ul>
+		</AboutStyles>
 	);
 };
 

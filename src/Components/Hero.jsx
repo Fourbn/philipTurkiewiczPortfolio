@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const HeroStyles = styled.section`
-	* {border: 1px solid red;}
-
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
