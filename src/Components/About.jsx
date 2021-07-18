@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import HtmlLogo from '../Components/SVG/HtmlLogo';
 import CssLogo from '../Components/SVG/CssLogo';
@@ -6,16 +7,11 @@ import JavascriptLogo from '../Components/SVG/JavascriptLogo';
 import JqueryLogo from '../Components/SVG/JqueryLogo';
 import ReactLogo from '../Components/SVG/ReactLogo';
 import FirebaseLogo from '../Components/SVG/FirebaseLogo';
-import styled from "styled-components";
+
+import HeadshotGif from '../images/phil-gradient-photo.gif';
 
 const AboutStyles = styled.section`
-	.about {
-		min-height: 100vh;
-		margin: 150px 2.5%;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-		align-items: flex-start;
-	}
+	min-height: 100vh;
 
 	.headshotContainer {
 		grid-column: 1 / -1;
@@ -30,8 +26,8 @@ const AboutStyles = styled.section`
 			margin-bottom: -5px;
 		}
 
-		h3 {
-			color: $nonBinaryGold;
+		.visualHeading {
+			color: var(--nonBinaryGold);
 			margin: 5px 0;
 		}
 
@@ -42,10 +38,13 @@ const AboutStyles = styled.section`
 		.button {
 			// with a new button hover, should change the margin-left 5px back to 0 for better alignment
 			margin: 25px 5px 55px 5px;
+			&:hover {
+				color: var(--nonBinaryGold);
+			}
 		}
 	}
 
-	.skills-box {
+	.skillsBox {
 		grid-column: 1 / -1;
 		width: 90%;
 		display: grid;
@@ -102,21 +101,36 @@ const AboutStyles = styled.section`
 		.react svg {
 			padding-bottom: 3px;
 		}
+
+		.firebase svg {
+			margin-bottom: -15px;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.headshotContainer {
+			grid-column: 1 / span 6;
+		}
+		.aboutInfo,
+		.skills,
+		.skillsBox {
+			grid-column: span 6 / -1;
+		}
 	}
 `;
 
 const About = () => {
 	return (
-		<AboutStyles className="about">
+		<AboutStyles className="grid-wrapper">
 			<div className="headshotContainer">
 				<img
-					src="./assets/phil-gradient-photo.gif"
+					src={HeadshotGif}
 					alt="Headshot of Philip. They have short curly brown hair, blue framed glasses, and they are wearing a black and purple plaid flannel. They look very sofisticated."
 				/>
 			</div>
 			<div className="aboutInfo">
 				<h2>About me</h2>
-				<h3>Hey, I'm Philip!</h3>
+				<p className="visualHeading">Hey, I'm Philip!</p>
 				<p>
 					Oh my goodness, hello! I am a Front-End developer based in Toronto,
 					Canada. I love long walks on the beach, writing clean code, and
@@ -143,8 +157,8 @@ const About = () => {
 					View Résumé
 				</a>
 			</div>
-			<h4>Skills</h4>
-			<ul className="skills-box">
+			<h3 className="skills">Skills</h3>
+			<ul className="skillsBox">
 				<li className="skill html">
 					<HtmlLogo />
 					<p>HTML 5</p>

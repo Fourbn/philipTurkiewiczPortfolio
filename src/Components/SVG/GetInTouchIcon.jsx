@@ -9,7 +9,7 @@ const SvgStyles = styled.svg`
 
 const GetInTouchIcon = () => {
   return (
-		<svg
+		<SvgStyles
 			version="1.1"
 			id="Layer_1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -17,10 +17,6 @@ const GetInTouchIcon = () => {
 			y="0px"
 			viewBox="0 0 92 92"
 		>
-			{/* <style type="text/css">
-        .st0{fill:#F5A9B8;}
-        style="enable-background:new 0 0 92 92;"
-      </style> */}
 			<g id="Group_16" transform="translate(0)">
 				<g id="Group_12">
 					<path
@@ -151,7 +147,7 @@ const GetInTouchIcon = () => {
 					/>
 				</g>
 			</g>
-		</svg>
+		</SvgStyles>
 	);
 };
 

@@ -5,9 +5,6 @@ const SvgStyles = styled.svg`
 	.st0 {
 		fill: #b57edc;
 	}
-	.st0:hover {
-		fill: #ffffff;
-	}
 	.st1 {
 		fill: none;
 		stroke: #b57edc;

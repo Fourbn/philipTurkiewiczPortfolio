@@ -1,23 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 
+import ScrollIcon from './SVG/ScrollIcon';
+
 const HeroStyles = styled.section`
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+	margin: 4rem auto;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 
 	h1 {
 		color: var(--transBlue);
 		margin: 25px 0 20px 0;
 		animation: fading-in 3s;
+		grid-column: 2 / -2;
+	}
+
+	.subheading,
+	.surheading {
+		grid-column: 2 / -2;
+		text-align: center;
 	}
 
 	.developer,
 	.debugger,
 	.debutante,
-	.subheading {
+	.surheading {
 		animation: fading-in 3s;
 	}
 
@@ -31,26 +39,23 @@ const HeroStyles = styled.section`
 
 	.skipToContent {
 		width: 65px;
-		position: relative;
-		top: 100px;
+		grid-column: 2 / -2;
+		margin: 4rem auto 0;
 	}
 `;
 
 const Hero = () => {
 	return (
-		<HeroStyles>
-			<p class="subheading">Philip Turkiewicz is...</p>
+		<HeroStyles className="grid-wrapper">
+			<p className="subheading">Philip Turkiewicz is...</p>
 			<h1>CodeTurkie</h1>
-			<p class="subheading">
-				<span class="developer">Developer.</span>{" "}
-				<span class="debugger">Debugger.</span>{" "}
-				<span class="debutante">Debutante.</span>
+			<p className="surheading">
+				<span className="developer">Developer.</span>{" "}
+				<span className="debugger">Debugger.</span>{" "}
+				<span className="debutante">Debutante.</span>
 			</p>
-			<div class="skipToContent">
-				<img
-					src="./assets/icons/scroll-icon.svg"
-					alt="Purple scroll with arrow below it pointing down to indicate there is more content on the website."
-				/>
+			<div className="skipToContent">
+				<ScrollIcon />
 			</div>
 		</HeroStyles>
 	);

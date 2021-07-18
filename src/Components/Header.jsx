@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import TurkeyLogo from './SVG/TurkeyLogo';
+import GetInTouchIcon from './SVG/GetInTouchIcon';
+
 const HeaderStyles = styled.header`
   min-height: 8vh;
   position: fixed;
@@ -13,9 +16,14 @@ const HeaderStyles = styled.header`
     justify-content: space-between;
 
     li {
+      width: 100px;
       padding: 10px;
       display: flex;
       align-items: center;
+
+      svg {
+        width: 100%;
+      }
     }
   }
 
@@ -40,21 +48,15 @@ const Header = () => {
     <HeaderStyles>
       <nav>
         <ul>
-          <li class="turkeyLogo">
-            <img
-              src="./assets/icons/code-turkey.svg"
-              alt="Turkey logo made of brackets and underscores."
-            />
+          <li className="turkeyLogo">
+            <TurkeyLogo />
           </li>
-          <li class="getInTouch">
+          <li className="getInTouch">
             <a
               href="#contact"
               aria-label="Click here to scroll directly to the Contact Me section"
             >
-              <img
-                src="./assets/icons/get-in-touch.svg"
-                alt="Circle of text saying Get In Touch"
-              />
+              <GetInTouchIcon />
             </a>
           </li>
         </ul>

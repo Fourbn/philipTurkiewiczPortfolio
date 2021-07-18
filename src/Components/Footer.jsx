@@ -7,21 +7,22 @@ import {
 	FaTwitter,
 } from "react-icons/fa";
 import styled from "styled-components";
+import TurkeyLogo from "./SVG/TurkeyLogo";
 
 const FooterStyles = styled.footer`
 	border-top: 1px solid var(--grey);
-	padding: 40px 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+	padding: 4rem 0;
 
 	.footerNav {
 		margin: 0;
-		width: 100%;
+		justify-self: center;
+		grid-column: 2 / -2;
 		ul {
 			display: flex;
 			justify-content: center;
+			@media (min-width: 1200px) {
+				justify-content: flex-end;
+			}
 		}
 		li {
 			font-size: 1rem;
@@ -34,6 +35,7 @@ const FooterStyles = styled.footer`
 		text-align: center;
 		width: 100%;
 		padding: 35px 0;
+		grid-column: 2 / -2;
 		p:first-of-type {
 			margin-bottom: 4px;
 		}
@@ -84,16 +86,37 @@ const FooterStyles = styled.footer`
 			color: var(--transBlue);
 		}
 	}
+
+	.turkeyLogo {
+		grid-column: 2 / -2;
+		justify-self: center;
+	}
+
+	@media (min-width: 1200px) {
+		.turkeyLogo,
+		.credits,
+		.footerNav {
+			align-self: center;
+		}
+		.turkeyLogo {
+			grid-column: 1 / span 3;
+			justify-self: start;
+		}
+		.credits {
+			grid-column: 6 / 9;
+		}
+		.footerNav {
+			grid-column: span 3 / -1;
+			justify-self: end;
+		}
+	}
 `;
 
 const Footer = () => {
 	return (
-		<FooterStyles>
+		<FooterStyles className="grid-wrapper">
 			<div className="turkeyLogo">
-				<img
-					src="./assets/icons/code-turkey.svg"
-					alt="Turkey logo made of brackets and underscores."
-				/>
+				<TurkeyLogo />
 			</div>
 			<div className="credits">
 				<p>
@@ -138,7 +161,7 @@ const Footer = () => {
 							href="https://twitter.com/fourbn_task"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="socialLink twitter"
+							className="socialLink twitter"
 						>
 							<FaTwitter className="socialIcon twitter" />
 						</a>

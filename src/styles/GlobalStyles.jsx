@@ -94,28 +94,56 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 13.6rem;
+    font-size: 5.2rem;
+    @media (min-width: 375px) {
+      font-size: 6.4rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 13.6rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 19.2rem;
+    }
   }
 
   h2,
-  h4,
+  .skills,
   .subheading,
+  .surheading,
   .tab {
     font-size: 1.6rem;
+    font-weight: 700;
     letter-spacing: 3px;
     line-height: 2;
     text-transform: uppercase;
+    @media (min-width: 375px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 2.4rem;
+    }
   }
 
-  h3 {
+  h3,
+  .visualHeading {
     font-size: 4.4rem;
+    font-weight: 700;
     letter-spacing: 2px;
+    @media (min-width: 375px) {
+      font-size: 4.8rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 6.4rem;
+    }
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.5;
+    @media (min-width: 375px) {
+      font-size: 1.6rem;
+    }
   }
 // =========================================== //
 
@@ -126,11 +154,44 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .wrapper {
-    width: 95%;
     max-width: 1200px;
+  }
+  
+  .grid-wrapper {
+    width: 95%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 5% repeat(auto-fit, minmax(65px, 1fr)) 5%;
+    grid-column-gap: 30px;
   }
 
+  .button {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: normal;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 13px 25px;
+    border: 2px solid var(--white);
+    border-radius: 1px;
+    transition: background-color .3s, color .3s, transform .3s;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      border: 2px solid;
+      border-color: inherit;
+      transform: scaleX(1.07);
+      transition: border .3s, color .3s, transform .3s;
+    }
+  }
+
+  .turkeyLogo {
+    width: 100px;
+  }
 // =========================================== //
 
 // ============== ANIMATIONS ================= //
