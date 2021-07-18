@@ -30,6 +30,9 @@ const ProjectsStyles = styled.section`
 		grid-column: 2 / -2;
 		li {
 			margin-bottom: 40vh;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
 		}
 
 		@media (min-width: 1200px) {

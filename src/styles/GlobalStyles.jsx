@@ -86,7 +86,9 @@ const GlobalStyles = createGlobalStyle`
   h4,
   p,
   .subheading,
-  .tab {
+  .surheading,
+  .tab,
+  label {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     line-height: normal;
@@ -137,7 +139,8 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-  p {
+  p,
+  .label {
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.5;
